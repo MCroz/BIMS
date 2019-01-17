@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>BIMS</title>
+
+    <!-- External Style Sheets -->
+    <!-- see http://photonkit.com/ to learn more about photon styles -->
+    <link rel="stylesheet" href="./css/photon.css" type="text/css">
+
+    <!-- App Style Sheets -->
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+
+    <link rel="stylesheet" type="text/css" href="semantic/semantic.min.css">
+    <script>
+        const jQuery = require('jquery');
+        const $ = jQuery;
+        require('./semantic/semantic.min.js');
+    </script>
+</head>
+<body class="htmlBody">
+
+</body>
+
+<!-- Call for the html control object -->
+<script>
+    //const $ = require("jquery");
+    var loginView = require('./js/views/login/loginView');
+    let LoginView = new loginView();
+    $('.htmlBody').css('background-image', 'url("./images/buting-bg.jpg")');
+    $(".htmlBody").html(LoginView.render().$el);
+    
+</script>
+</html>
