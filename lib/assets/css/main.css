@@ -112,7 +112,7 @@ body {
   align-items: center;
   justify-content: center;
 }
-#loginBackground {
+.loginBackground {
   padding-top: 10%;
   background-color: #80b6e6;
 }
