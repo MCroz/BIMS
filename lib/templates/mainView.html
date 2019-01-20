@@ -1,3 +1,6 @@
+<div class="ui dimmer main-view-loader">
+    <div class="ui indeterminate text loader">Loading...</div>
+</div>
 <div class="ui fixed top menu">
     <a href="javascript:void(0)" class="icon active item" id="hideToggle"><h3><i class="chevron left icon"></i></h3></a>
     <a href="javascript:void(0)" class="icon active item" id="showToggle"><h3><i class="chevron right icon"></i></h3></a>
@@ -23,7 +26,7 @@
                 <div align="center" class="profile">
                     <br>
                     <a href=""><img src="assets/img/people_4.jpg" alt="Marry Doe" class="ui circular image" width="150px"></a>
-                    <div class="ui white header">Aljon Alacapa</div>
+                    <div class="ui white header"><%=window.bims.currentUser.fname + " " + window.bims.currentUser.mname + " " + window.bims.currentUser.lname %></div>
                     <div class="ui divider"></div>
                 </div>
                 <div class="ui fluid vertical menu" id="verticalMenu">
@@ -40,6 +43,69 @@
             <div class="sixteen wide column" id="content">
 
             </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- for modals -->
+<div class="ui modal add-users-modal">
+    <i class="close icon"></i>
+    <div class="header">
+        Add User
+    </div>
+    <div class="content">
+        <div class="ui form">
+            <div class="three fields">
+                <div class="field">
+                    <label>First name</label>
+                    <input class="cFname" type="text" placeholder="First Name">
+                </div>
+                <div class="field">
+                    <label>Middle name</label>
+                    <input class="cMname" type="text" placeholder="Middle Name">
+                </div>
+                <div class="field">
+                    <label>Last name</label>
+                    <input class="cLname" type="text" placeholder="Last Name">
+                </div>
+            </div>
+            <div class="three fields">
+                <div class="field">
+                    <label>Username</label>
+                    <input class="cUsername" type="text" placeholder="Username">
+                </div>
+                <div class="field">
+                    <label>Password</label>
+                    <input class="cPassword" type="password" placeholder="Password">
+                </div>
+                <div class="field">
+                    <label>Retype Password</label>
+                    <input class="cRPassword" type="password" placeholder="Retype Password">
+                </div>
+            </div>
+            <div class="field">
+                <label>Role</label>
+                <div class="ui selection dropdown roleSelect">
+                    <input class="cRole" type="hidden" name="role">
+                    <i class="dropdown icon"></i>
+                    <div class="default text">Role</div>
+                    <div class="menu">
+                        <div class="item" data-value="Administrator">Administrator</div>
+                        <div class="item" data-value="Inventory/Medicine Staff">Inventory/Medicine Staff</div>
+                        <div class="item" data-value="Document Staff">Document Staff</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="actions">
+        <div class="ui black deny button">
+            Cancel
+        </div>
+        <div class="ui positive right labeled icon button">
+            Save
+            <i class="checkmark icon"></i>
         </div>
     </div>
 </div>

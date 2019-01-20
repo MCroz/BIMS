@@ -31,10 +31,16 @@
 <script>
     //const $ = require("jquery");
     window.bims = {
-        endpointUrl: "http://localhost:52981/api/"
+        endpointUrl: "http://localhost:6513/api/",
+        showPreloader: function() {
+            $(".main-view-loader").addClass("active");
+        },
+        hidePreloader: function() {
+            $(".main-view-loader").removeClass("active");
+        }
     };
     var loginView = require('./js/views/login/loginView');
-    let LoginView = new loginView();
-    LoginView.render();
+    window.bims.loginView = new loginView();
+    window.bims.loginView.render();
 </script>
 </html>
