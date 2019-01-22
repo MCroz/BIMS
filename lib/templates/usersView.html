@@ -13,20 +13,20 @@
     </thead>
     <tbody>
         <% _.each(users, function (user) { %>
-            <tr data-id="<%= user.id %>">
+            <tr data-id="<%= user.ID %>">
                     <td class="collapsing">
-                        <button class="ui icon button">
+                        <button class="ui icon button btnUpdateUser">
                             <i class="blue edit icon"></i>
                         </button>
                         <button class="ui icon button btnRemoveUser">
                             <i class="red trash icon"></i>
                         </button>
                     </td>
-                    <td><%= user.fname %></td>
-                    <td><%= user.mname %></td>
-                    <td><%= user.lname %></td>
-                    <td><%= user.username %></td>
-                    <td><%= user.role %></td>
+                    <td><%= user.FirstName %></td>
+                    <td><%= user.MiddleName %></td>
+                    <td><%= user.LastName %></td>
+                    <td><%= user.Username %></td>
+                    <td><%= user.Role %></td>
                 </tr>
         <% }); %>
     </tbody>
