@@ -55,7 +55,7 @@
         Add User
     </div>
     <div class="content">
-        <div class="ui form">
+        <form class="ui form cuForm">
             <div class="three fields">
                 <div class="field">
                     <label>First name</label>
@@ -87,17 +87,11 @@
             <div class="field">
                 <label>Role</label>
                 <div class="ui selection dropdown cuRoleSelect">
-                    <input class="cRole" type="hidden" name="role">
-                    <i class="dropdown icon"></i>
                     <div class="default text">Role</div>
-                    <div class="menu">
-                        <div class="item cuRoleOption" data-value="Administrator">Administrator</div>
-                        <div class="item cuRoleOption" data-value="Inventory/Medicine Staff">Inventory/Medicine Staff</div>
-                        <div class="item cuRoleOption" data-value="Document Staff">Document Staff</div>
-                    </div>
+                    <i class="dropdown icon"></i>
                 </div>
             </div>
-        </div>
+        </form>
     </div>
     <div class="actions">
         <div class="ui black deny button">
@@ -148,14 +142,8 @@
             <div class="field">
                 <label>Role</label>
                 <div class="ui selection dropdown euRoleSelect">
-                    <input class="euRole" type="hidden" name="role">
-                    <i class="dropdown icon"></i>
                     <div class="default text">Role</div>
-                    <div class="menu">
-                        <div class="item euAdmin" data-value="Administrator">Administrator</div>
-                        <div class="item euAIMStaff" data-value="Inventory/Medicine Staff">Inventory/Medicine Staff</div>
-                        <div class="item euDStaff" data-value="Document Staff">Document Staff</div>
-                    </div>
+                    <i class="dropdown icon"></i>
                 </div>
             </div>
         </div>
