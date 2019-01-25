@@ -3,84 +3,64 @@
     <meta charset="utf8">
     <title>SuitArt Business Card</title>
     <style>
-      html, body {
-        margin: 0;
-        padding: 0;
-        font-family: 'Sackers Gothic Std';
-        font-weight: 500;
-        font-size: 7px;
-        background: rgb(241,241,241);
-        -webkit-print-color-adjust: exact;
-        box-sizing: border-box;
-      }
       .page {
-        position: relative;
-        height: 90mm;
-        width: 50mm;
-        display: block;
-        background: black;
-        page-break-after: auto;
-        margin: 50px;
-        overflow: hidden;
+        margin: 0;
+        height: 11in;
+        width: 8.5in;
+      }
+      @media all {
+        .border-page {
+          border: thin solid black;
+          height: 100%;
+          width: 100%;
+        }
+        .first-header-page {
+          background-color: yellow;
+          height: 0.25in;
+          width: 100%;
+          border-bottom: thin solid black;
+        }
+        .main-header-page {
+          width: 100%;
+          background-color: white;
+          border-bottom: thin solid black;
+          height: 3cm;
+        }
+        .logo-container {
+          width: 4cm;
+          padding: 10px;
+        }
+        .buting-logo {
+          background-image: url('./buting-logo.jpg');
+          background-repeat: no-repeat;
+          background-position: center; 
+          background-size: contain;
+          width: 100%;
+          height: 100%;
+        }
       }
       @media print {
         body {
-          background: black;
+          background: white;
         }
         .page {
           margin: 0;
           height: 100%;
-          width: 100%;
-        }
-      }
-      .page.first {
-        border-left: 5px solid green;
-      }
-      .bottom {
-        position: absolute;
-        left: 5mm;
-        right: 5mm;
-        bottom: 5mm;
-      }
-      .group {
-        margin-top: 3mm;
-      }
-      .line {
-        color: white;
-        position: relative;
-      }
-      .center {
-        text-align: center;
-      }
-      .logo {
-        position: relative;
-        width: 80%;
-        left: 10%;
-        top: 15%;
+          width: 100%;        }
       }
     </style>
   </head>
   <body>
-    <div class="page">
-      <div class="bottom">
-        <div class="line">Marc Bachmann</div>
-        <div class="line">cto</div>
-
-        <div class="group">
-          <div class="line">p: +41 00 000 00 00</div>
-          <div class="line">github: marcbachmann</div>
+    <div class='page' style="background-color:white;">
+      <div class='border-page'>
+        <div class='first-header-page'></div>
+        <div class='main-header-page'>
+            <div class='logo-container'>
+              <div class='buting-logo'></div>
+            </div>
+            <div></div>
+            <div class='logo-container'></div>
         </div>
-        <div class="group">
-          <div class="line">suitart ag</div>
-          <div class="line">räffelstrasse 25</div>
-          <div class="line">8045 zürich</div>
-        </div>
-      </div>
-    </div>
-    <div class="page">
-      <img class="logo" src="{{image}}">
-      <div class="bottom">
-          <div class="line center">8045 zürich</div>
       </div>
     </div>
   </body>

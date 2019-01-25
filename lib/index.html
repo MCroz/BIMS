@@ -30,17 +30,30 @@
 <!-- Call for the html control object -->
 <script>
     //const $ = require("jquery");
-    window.bims = {
-        endpointUrl: "http://localhost:6513/api/",
-        showPreloader: function() {
-            $(".main-view-loader").addClass("active");
-        },
-        hidePreloader: function() {
-            $(".main-view-loader").removeClass("active");
-        }
-    };
-    var loginView = require('./js/views/login/loginView');
-    window.bims.loginView = new loginView();
-    window.bims.loginView.render();
+
+        var fs = require('fs');
+        var pdf = require('html-pdf');
+        var html = fs.readFileSync('./lib/js/views/main/test.html', 'utf8');
+        var options = { format: 'Letter' };
+         
+        pdf.create(html, options).toFile('./lib/js/views/main/test.pdf', function(err, res) {
+          if (err) return console.log(err);
+          console.log(res); // { filename: '/app/businesscard.pdf' }
+        });
+
+
+
+    // window.bims = {
+    //     endpointUrl: "http://localhost:6513/api/",
+    //     showPreloader: function() {
+    //         $(".main-view-loader").addClass("active");
+    //     },
+    //     hidePreloader: function() {
+    //         $(".main-view-loader").removeClass("active");
+    //     }
+    // };
+    // var loginView = require('./js/views/login/loginView');
+    // window.bims.loginView = new loginView();
+    // window.bims.loginView.render();
 </script>
 </html>
