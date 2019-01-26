@@ -5,37 +5,41 @@
     <style>
       .page {
         margin: 0;
-        height: 11in;
-        width: 8.5in;
+        height: 1056px;
+        width: 816px;
+        border: thin solid black;
       }
       @media all {
-        .border-page {
-          border: thin solid black;
-          height: 100%;
-          width: 100%;
-        }
         .first-header-page {
           background-color: yellow;
-          height: 0.25in;
+          height: 26px;
           width: 100%;
+          margin: 0;
           border-bottom: thin solid black;
         }
         .main-header-page {
           width: 100%;
           background-color: white;
           border-bottom: thin solid black;
-          height: 3cm;
+          height: 1.75in;
+          display: flex;
+          align-items: flex-start;
         }
         .logo-container {
-          width: 4cm;
-          padding: 10px;
+          margin: 0;
+          width: 1.55in;
+          height: 1.55in;
+          padding-left: .1in;
+          padding-right: .1in;
+          padding-top: .1in;
+          padding-bottom: .1in;
         }
         .buting-logo {
-          background-image: url('./buting-logo.jpg');
-          background-repeat: no-repeat;
-          background-position: center; 
-          background-size: contain;
+          height: 100%;
           width: 100%;
+        }
+        .center-header {
+          width: 5in;
           height: 100%;
         }
       }
@@ -46,21 +50,24 @@
         .page {
           margin: 0;
           height: 100%;
-          width: 100%;        }
+          width: 100%;        
+        }
       }
     </style>
   </head>
   <body>
     <div class='page' style="background-color:white;">
-      <div class='border-page'>
-        <div class='first-header-page'></div>
-        <div class='main-header-page'>
-            <div class='logo-container'>
-              <div class='buting-logo'></div>
-            </div>
-            <div></div>
-            <div class='logo-container'></div>
-        </div>
+      <div class='first-header-page'></div>
+      <div class='main-header-page'>
+          <div class='logo-container'>
+            <img class='buting-logo' src="./buting-logo.jpg">
+          </div>
+          <div class='center-header'>
+            
+          </div>
+          <div class='logo-container'>
+            <img class='buting-logo' src="./buting-logo.jpg">
+          </div>
       </div>
     </div>
   </body>

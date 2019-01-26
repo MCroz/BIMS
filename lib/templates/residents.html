@@ -1,0 +1,47 @@
+<h2><i class="table icon"></i> Residents List</h2>
+<div class="ui divider"></div>
+<!-- <div class="ui left icon input">
+    <input class="userTabSearch" type="text" placeholder="Search users...">
+    <i class="users icon"></i>
+</div> -->
+<table class="ui compact celled definition table usersDataTable">
+    <thead>
+        <tr>
+        <th></th>
+        <th>First Name</th>
+        <th>Middle Name</th>
+        <th>Last Name</th>
+        <th>Username</th>
+        <th>Position</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% _.each(users, function (user) { %>
+            <tr data-id="<%= user.ID %>">
+                    <td class="collapsing">
+                        <button class="ui icon button btnUpdateUser">
+                            <i class="blue edit icon"></i>
+                        </button>
+                        <button class="ui icon button btnRemoveUser">
+                            <i class="red trash icon"></i>
+                        </button>
+                    </td>
+                    <td><%= user.FirstName %></td>
+                    <td><%= user.MiddleName %></td>
+                    <td><%= user.LastName %></td>
+                    <td><%= user.Username %></td>
+                    <td><%= user.Role %></td>
+                </tr>
+        <% }); %>
+    </tbody>
+    <tfoot class="full-width">
+        <tr>
+            <th colspan="6">
+                <div class="ui left floated small primary labeled icon button btnAddUser">
+                    <i class="user icon"></i> Add User
+                </div>
+            </th>
+        </tr>
+    </tfoot>
+</table>
+
