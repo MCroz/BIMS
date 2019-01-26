@@ -1,0 +1,47 @@
+<h2><i class="table icon"></i> Medicines Master List</h2>
+<div class="ui divider"></div>
+
+<table class="ui compact celled definition table medicinesMasterListDataTable">
+    <thead>
+        <tr>
+        <th></th>
+        <th>Medicine Name</th>
+        <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% _.each(residents, function (resident) { %>
+            <tr data-id="<%= resident.ID %>">
+                    <td class="collapsing">
+                        <button class="ui icon button btnUpdateResident">
+                            <i class="blue edit icon"></i>
+                        </button>
+                        <button class="ui icon button btnRemoveResident">
+                            <i class="red trash icon"></i>
+                        </button>
+                    </td>
+                    <td><%= resident.FirstName %></td>
+                    <td><%= resident.MiddleName %></td>
+                    <td><%= resident.LastName %></td>
+                    <td><%= resident.Gender %></td>
+                    <td><%= resident.CivilStatus %></td>
+                    <td><%= resident.BirthDate %></td>
+                    <td><%= resident.AddressNo %></td>
+                    <td><%= resident.AddressSt %></td>
+                    <td><%= resident.AddressZone %></td>
+                    <td><%= resident.BirthPlace %></td>
+                    <td><%= resident.Citizenship %></td>
+                </tr>
+        <% }); %>
+    </tbody>
+    <tfoot class="full-width">
+        <tr>
+            <th colspan="12">
+                <div class="ui left floated small primary labeled icon button btnAddResidents">
+                    <i class="user icon"></i> Add Resident
+                </div>
+            </th>
+        </tr>
+    </tfoot>
+</table>
+
