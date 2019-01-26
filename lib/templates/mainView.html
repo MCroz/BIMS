@@ -32,7 +32,7 @@
                 <div class="ui fluid vertical menu" id="verticalMenu">
                 <!-- <div class="ui fluid vertical menu" id="verticalMenu" style="background-color: #569edd;height: 100%;max-height: none;"> -->
                     <a href="#" class="item btnTest"><i class="dashboard icon"></i> <span>Dashboard</span></a>
-                    <a href="#" class="item"><i class="book icon"></i> <span>Residents</span></a>
+                    <a href="#" class="item btnSideResidents"><i class="book icon"></i> <span>Residents</span></a>
                     <a href="#" class="item btnSideUsers"><i class="table icon"></i> <span>Users</span></a>
                     <a href="#" class="item"><i class="bar chart icon"></i> <span>Chart</span></a>
                     <a href="#" class="item"><i class="block layout icon"></i> <span>Card</span></a>
@@ -147,6 +147,178 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="actions">
+        <div class="ui black deny button">
+            Cancel
+        </div>
+        <div class="ui positive right labeled icon button">
+            Save
+            <i class="checkmark icon"></i>
+        </div>
+    </div>
+</div>
+
+<div class="ui modal add-residents-modal">
+    <i class="close icon"></i>
+    <div class="header">
+        Add Resident
+    </div>
+    <div class="content">
+        <form class="ui form crForm">
+            <div class="three fields">
+                <div class="field">
+                    <label>First Name</label>
+                    <input class="crFname" type="text" placeholder="First Name">
+                </div>
+                <div class="field">
+                    <label>Middle Name</label>
+                    <input class="crMname" type="text" placeholder="Middle Name">
+                </div>
+                <div class="field">
+                    <label>Last Name</label>
+                    <input class="crLname" type="text" placeholder="Last Name">
+                </div>
+            </div>
+            <div class="three fields">
+                <div class="field">
+                    <label>Gender</label>
+                    <div class="ui selection dropdown crGender">
+                        <div class="default text">Gender</div>
+                        <i class="dropdown icon"></i>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Civil Status</label>
+                    <div class="ui selection dropdown crCivilStatus">
+                        <div class="default text">Civil Status</div>
+                        <i class="dropdown icon"></i>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Birth Date</label>
+                    <div class="ui calendar crBirthDate">
+                        <div class="ui input left icon">
+                          <i class="calendar icon"></i>
+                          <input type="text" placeholder="Birth Date" readonly>
+                        </div>
+                      </div>
+                </div>
+            </div>
+            <div class="three fields">
+                <div class='field'>
+                    <label>Address Number</label>
+                    <input class="crAddressNo" type="text" placeholder="Address Number">
+                </div>
+                <div class='field'>
+                    <label>Address Street</label>
+                    <input class="crAddressSt" type="text" placeholder="Address Street">
+                </div>
+                <div class='field'>
+                    <label>Address Zone</label>
+                    <div class="ui selection dropdown crAddressZone">
+                        <div class="default text">Address Zone</div>
+                        <i class="dropdown icon"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="two fields">
+                <div class="field">
+                    <label>Birth Place</label>
+                    <input class="crBirthPlace" type="text" placeholder="Birth Place">
+                </div>
+                <div class='field'>
+                    <label>Citizenship</label>
+                    <input class="crCitizenship" type="text" placeholder="Citizenship">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="actions">
+        <div class="ui black deny button">
+            Cancel
+        </div>
+        <div class="ui positive right labeled icon button">
+            Save
+            <i class="checkmark icon"></i>
+        </div>
+    </div>
+</div>
+
+<div class="ui modal edit-residents-modal">
+    <i class="close icon"></i>
+    <div class="header">
+        Edit Resident
+    </div>
+    <div class="content">
+        <form class="ui form crForm">
+            <div class="three fields">
+                <div class="field">
+                    <label>First Name</label>
+                    <input class="erFname" type="text" placeholder="First Name">
+                </div>
+                <div class="field">
+                    <label>Middle Name</label>
+                    <input class="erMname" type="text" placeholder="Middle Name">
+                </div>
+                <div class="field">
+                    <label>Last Name</label>
+                    <input class="erLname" type="text" placeholder="Last Name">
+                </div>
+            </div>
+            <div class="three fields">
+                <div class="field">
+                    <label>Gender</label>
+                    <div class="ui selection dropdown erGender">
+                        <div class="default text">Gender</div>
+                        <i class="dropdown icon"></i>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Civil Status</label>
+                    <div class="ui selection dropdown erCivilStatus">
+                        <div class="default text">Civil Status</div>
+                        <i class="dropdown icon"></i>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Birth Date</label>
+                    <div class="ui calendar erBirthDate">
+                        <div class="ui input left icon">
+                          <i class="calendar icon"></i>
+                          <input type="text" placeholder="Birth Date" readonly>
+                        </div>
+                      </div>
+                </div>
+            </div>
+            <div class="three fields">
+                <div class='field'>
+                    <label>Address Number</label>
+                    <input class="erAddressNo" type="text" placeholder="Address Number">
+                </div>
+                <div class='field'>
+                    <label>Address Street</label>
+                    <input class="erAddressSt" type="text" placeholder="Address Street">
+                </div>
+                <div class='field'>
+                    <label>Address Zone</label>
+                    <div class="ui selection dropdown erAddressZone">
+                        <div class="default text">Address Zone</div>
+                        <i class="dropdown icon"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="two fields">
+                <div class="field">
+                    <label>Birth Place</label>
+                    <input class="erBirthPlace" type="text" placeholder="Birth Place">
+                </div>
+                <div class='field'>
+                    <label>Citizenship</label>
+                    <input class="erCitizenship" type="text" placeholder="Citizenship">
+                </div>
+            </div>
+        </form>
     </div>
     <div class="actions">
         <div class="ui black deny button">
