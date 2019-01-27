@@ -1,13 +1,23 @@
 <h2><i class="table icon"></i> Resident Transactions </h2>
 <div class="ui divider"></div>
+<div class="ui action input">
+        <input type="text" placeholder="Search...">
+        <select class="ui compact selection dropdown">
+          <option value="all">All</option>
+          <option selected="" value="articles">Articles</option>
+          <option value="products">Products</option>
+        </select>
+        <div class="ui button">Search</div>
+      </div>
+<div class="ui divider"></div>
 
-    <div class="ui special cards">
+    <div class="ui three stackable cards">
             <% _.each(residents, function (resident) { %>
-        <div class="card resident-card">
+        <div class="card">
           <div class="blurring dimmable image hovering-image">
             <div class="ui dimmer">
               <div class="content">
-                <div class="center resident-card-buttons">
+                <div class="center">
                     <div class="ui button">Dispense</div>
                     <br>
                     <div class="ui button">View Transactions</div>
