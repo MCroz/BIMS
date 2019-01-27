@@ -2,10 +2,10 @@
 <div class="ui divider"></div>
 <div class="ui action input">
         <input type="text" placeholder="Search...">
-        <select class="ui compact selection dropdown">
-          <option value="all">All</option>
-          <option selected="" value="articles">Articles</option>
-          <option value="products">Products</option>
+        <select class="ui compact selection dropdown rtFilter">
+          <option selected value="all">All</option>
+          <option value="Name">Name</option>
+          <option value="Zone">Zone</option>
         </select>
         <div class="ui button">Search</div>
       </div>
@@ -16,9 +16,9 @@
         <div class="card">
           <div class="blurring dimmable image hovering-image">
             <div class="ui dimmer">
-              <div class="content">
+              <div class="content cardContainer" data-id='<%=resident.ID%>'>
                 <div class="center">
-                    <div class="ui button">Dispense</div>
+                    <div class="ui button btnDispenseMedicine">Dispense</div>
                     <br>
                     <div class="ui button">View Transactions</div>
                     <br>
@@ -26,7 +26,7 @@
                 </div>
               </div>
             </div>
-            <img src="../lib/images/boy.png">
+            <img src="<%=window.bims.imageLocations + resident.Gender + '.png' %>">
           </div>
           <div class="content">
             <a class="header"><%=resident.FirstName %> <%=resident.MiddleName %> <%=resident.LastName %></a>

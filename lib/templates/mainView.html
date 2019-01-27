@@ -233,6 +233,12 @@
                     <input class="crCitizenship" type="text" placeholder="Citizenship">
                 </div>
             </div>
+            <div class="field">
+                <button class="ui labeled icon button crUploadImage">
+                    <i class="upload icon"></i>Upload Image
+                </button>
+                <input style="display: none;" type="file" class="crImage"> 
+            </div>
         </form>
     </div>
     <div class="actions">
@@ -423,6 +429,68 @@
                     </div>
                 </div>
             </div>
+        </form>
+    </div>
+    <div class="actions">
+        <div class="ui black deny button">
+            Cancel
+        </div>
+        <div class="ui positive right labeled icon button">
+            Save
+            <i class="checkmark icon"></i>
+        </div>
+    </div>
+</div>
+
+<div class="ui modal dispense-medicine-modal">
+    <i class="close icon"></i>
+    <div class="header">
+        Dispense Medicine
+    </div>
+    <div class="content">
+        <form class="ui form dmForm">
+            <div class="three fields">
+                <div class="field">
+                    <label>First Name</label>
+                    <input class="dmFirstName" type="text" placeholder="First Name" readonly>
+                </div>
+                <div class="field">
+                    <label>Middle Name</label>
+                    <input class="dmMiddleName" type="text" placeholder="Middle Name" readonly>
+                </div>
+                <div class="field">
+                    <label>Last Name</label>
+                    <input class="dmLastName" type="text" placeholder="Last Name" readonly>
+                </div>
+            </div>
+            <div class="two fields">
+                <div class="field">
+                    <label>Gender</label>
+                    <input class="dmGender" type="text" placeholder="Gender" readonly>
+                </div>
+                <div class="field">
+                    <label>Address Zone</label>
+                    <input class="dmAddressZone" type="text" placeholder="Address Zone" readonly>
+                </div>
+            </div>
+            <table class="ui inverted grey table">
+                <thead>
+                    <tr>
+                        <th>Medicine Name</th>
+                        <th>Description</th>
+                        <th>Expiration Date</th>
+                        <th>Quantity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Apples</td>
+                        <td>200</td>
+                        <td>0g</td>
+                        <td>0g</td>
+                    </tr>
+                </tbody>
+            </table>
         </form>
     </div>
     <div class="actions">
