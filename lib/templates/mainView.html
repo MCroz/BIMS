@@ -34,10 +34,11 @@
                     <a href="#" class="item btnTest"><i class="dashboard icon"></i> <span>Dashboard</span></a>
                     <a href="#" class="item btnSideResidents"><i class="book icon"></i> <span>Residents</span></a>
                     <a href="#" class="item btnSideUsers"><i class="table icon"></i> <span>Users</span></a>
-                    <a href="#" class="item btnMedicinesMasterList"><i class="bar chart icon"></i> <span>Medicine Master List</span></a>
-                    <a href="#" class="item"><i class="block layout icon"></i> <span>Medicine Inventory</span></a>
-                    <a href="#" class="item"><i class="tasks icon"></i> <span>Progress Bar</span></a>
-                    <a href="#" class="item"><i class="sign in icon"></i> <span>Login</span></a>
+                    <a href="#" class="item btnMedicinesMasterList"><i class="pills icon"></i> <span>Medicine Master List</span></a>
+                    <a href="#" class="item btnInventory"><i class="block layout icon"></i> <span>Medicine Inventory</span></a>
+                    <a href="#" class="item btnResidentTransactions"><i class="tasks icon"></i> <span>Residents Transaction</span></a>
+                    <a href="#" class="item"><i class="sign in icon"></i> <span>Business Permit</span></a>
+                    <a href="#" class="item"><i class="sign in icon"></i> <span>Reports</span></a>
                 </div>
             </div>
             <div class="sixteen wide column" id="content">
@@ -202,7 +203,7 @@
                           <i class="calendar icon"></i>
                           <input type="text" placeholder="Birth Date" readonly>
                         </div>
-                      </div>
+                    </div>
                 </div>
             </div>
             <div class="three fields">
@@ -316,6 +317,110 @@
                 <div class='field'>
                     <label>Citizenship</label>
                     <input class="erCitizenship" type="text" placeholder="Citizenship">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="actions">
+        <div class="ui black deny button">
+            Cancel
+        </div>
+        <div class="ui positive right labeled icon button">
+            Save
+            <i class="checkmark icon"></i>
+        </div>
+    </div>
+</div>
+
+<div class="ui modal add-medicines-modal">
+    <i class="close icon"></i>
+    <div class="header">
+        Add Medicine
+    </div>
+    <div class="content">
+        <form class="ui form cmForm">
+            <div class="two fields">
+                <div class="field">
+                    <label>Medicine Name</label>
+                    <input class="cmMedicineName" type="text" placeholder="Medicine Name">
+                </div>
+                <div class="field">
+                    <label>Description</label>
+                    <input class="cmDescription" type="text" placeholder="Description">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="actions">
+        <div class="ui black deny button">
+            Cancel
+        </div>
+        <div class="ui positive right labeled icon button">
+            Save
+            <i class="checkmark icon"></i>
+        </div>
+    </div>
+</div>
+
+<div class="ui modal edit-medicines-modal">
+    <i class="close icon"></i>
+    <div class="header">
+        Edit Medicine
+    </div>
+    <div class="content">
+        <form class="ui form emForm">
+            <div class="two fields">
+                <div class="field">
+                    <label>Medicine Name</label>
+                    <input class="emMedicineName" type="text" placeholder="Medicine Name">
+                </div>
+                <div class="field">
+                    <label>Description</label>
+                    <input class="emDescription" type="text" placeholder="Description">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="actions">
+        <div class="ui black deny button">
+            Cancel
+        </div>
+        <div class="ui positive right labeled icon button">
+            Save
+            <i class="checkmark icon"></i>
+        </div>
+    </div>
+</div>
+
+<div class="ui modal add-stocks-modal">
+    <i class="close icon"></i>
+    <div class="header">
+        Add Stock
+    </div>
+    <div class="content">
+        <form class="ui form asForm">
+            <div class="field">
+                <label>Medicine</label>
+                <div class="ui selection dropdown asMedicine">
+                    <div class="default text">Medicine Name</div>
+                    <i class="dropdown icon"></i>
+                </div>
+            </div>
+            <div class="field">
+                <label>Description</label>
+                <input class="asDescription" type="text" placeholder="Description" readonly>
+            </div>
+            <div class="field">
+                <label>Quantity</label>
+                <input class="asQuantity" type="number" placeholder="Quantity">
+            </div>
+            <div class="field">
+                <label>Expiration Date</label>
+                <div class="ui calendar asExpirationDate">
+                    <div class="ui input left icon">
+                      <i class="calendar icon"></i>
+                      <input type="text" placeholder="Expiration Date" readonly>
+                    </div>
                 </div>
             </div>
         </form>

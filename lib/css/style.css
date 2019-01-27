@@ -1,0 +1,15 @@
+.hovering-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    overflow: hidden;
+}
+
+.resident-card {
+    height: 250px;
+    width: 150px;
+}
+
+.resident-card-buttons {
+    display: flex; flex-direction: column;justify-content: center;align-items: center;
+}

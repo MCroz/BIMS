@@ -1,0 +1,33 @@
+<h2><i class="table icon"></i> Resident Transactions </h2>
+<div class="ui divider"></div>
+
+    <div class="ui special cards">
+            <% _.each(residents, function (resident) { %>
+        <div class="card resident-card">
+          <div class="blurring dimmable image hovering-image">
+            <div class="ui dimmer">
+              <div class="content">
+                <div class="center resident-card-buttons">
+                    <div class="ui button">Dispense</div>
+                    <br>
+                    <div class="ui button">View Transactions</div>
+                    <br>
+                    <div class="ui button">Print</div>
+                </div>
+              </div>
+            </div>
+            <img src="../lib/images/boy.png">
+          </div>
+          <div class="content">
+            <a class="header"><%=resident.FirstName %> <%=resident.MiddleName %> <%=resident.LastName %></a>
+            <div class="meta">
+                <span class="date"><%=resident.FormattedBirthDate %></span>
+            </div>
+            <div class="meta">
+                <span class="text"><%=resident.AddressZone %></span>
+            </div>
+          </div>
+        </div>
+        <% }) %>
+      </div>
+
