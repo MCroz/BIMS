@@ -13,15 +13,15 @@
     <tbody>
         <% _.each(medicines, function (medicine) { %>
             <tr data-id="<%= medicine.ID %>">
-                    <td class="collapsing">
-                        <button class="ui icon button btnUpdateMedicine">
-                            <i class="blue edit icon"></i>
-                        </button>
-                    </td>
-                    <td><%= medicine.MedicineName %></td>
-                    <td><%= medicine.Description %></td>
-                    <td><%= medicine.Quantity %></td>
-                </tr>
+                <td class="collapsing">
+                    <button class="ui icon button btnUpdateMedicine">
+                        <i class="blue edit icon"></i>
+                    </button>
+                </td>
+                <td><%= medicine.MedicineName %></td>
+                <td><%= medicine.Description %></td>
+                <td><%= medicine.Quantity %></td>
+            </tr>
         <% }); %>
     </tbody>
     <tfoot class="full-width">
@@ -34,4 +34,3 @@
         </tr>
     </tfoot>
 </table>
-

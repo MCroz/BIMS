@@ -48,7 +48,6 @@
     </div>
 </div>
 
-
 <!-- for modals -->
 <div class="ui modal add-users-modal">
     <i class="close icon"></i>
@@ -403,7 +402,7 @@
     <div class="header">
         Add Stock
     </div>
-    <div class="content">
+    <div class="scrolling content">
         <form class="ui form asForm">
             <div class="field">
                 <label>Medicine</label>
@@ -442,12 +441,12 @@
     </div>
 </div>
 
-<div class="ui modal dispense-medicine-modal">
+<div class="ui coupled modal dispense-medicine-modal">
     <i class="close icon"></i>
     <div class="header">
         Dispense Medicine
     </div>
-    <div class="content">
+    <div class="content scrolling">
         <form class="ui form dmForm">
             <div class="three fields">
                 <div class="field">
@@ -473,7 +472,7 @@
                     <input class="dmAddressZone" type="text" placeholder="Address Zone" readonly>
                 </div>
             </div>
-            <button class="ui right floated labeled icon button btnAddMedicine">
+            <button class="ui right floated labeled icon button btnDispenseAddMedicine">
                     <i class="pills icon"></i>
                     Add Medicine
             </button>
@@ -489,7 +488,14 @@
                 </thead>
                 <tbody class='dmMedicineItems'>
                     <tr>
-                        <td></td>
+                        <td class='collapsing'>
+                            <button class='ui icon button'>
+                                <i class='blue edit icon'></i>
+                            </button>
+                            <button class='ui icon button'>
+                                <i class='red trash icon'></i>
+                            </button>
+                        </td>
                         <td>dsadas</td>
                         <td>3213</td>
                         <td>656</td>
@@ -511,5 +517,41 @@
             Save
             <i class="checkmark icon"></i>
         </div>
+    </div>
+</div>
+
+<div class="ui coupled modal dispense-select-medicine-modal">
+    <i class="close icon"></i>
+    <div class="header">
+        Select Medidicine
+    </div>
+    <div class="scrolling content">
+        <form class="ui form dmForm">
+            <table class="ui compact celled definition table dmAddMedicineTable">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Medicine Name</th>
+                        <th>Description</th>
+                        <th>Expiration Date</th>
+                        <th>Stocks on Hand</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody class='dmAddMedicineTableBody'>
+                    <tr data-id="">
+                        <td class="collapsing">
+                            <button class="ui icon button">
+                                <i class="blue edit icon"></i>
+                            </button>
+                        </td>
+                        <td>Med Name</td>
+                        <td>Med Desc</td>
+                        <td>Qty</td>
+                        <td>Expiration Date</td>
+                    </tr>
+                </tbody>
+            </table>            
+        </form>
     </div>
 </div>

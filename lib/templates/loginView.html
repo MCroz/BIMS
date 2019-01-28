@@ -2,7 +2,7 @@
     <div class="ui dimmer login-loader">
         <div class="ui indeterminate text loader">Loading</div>
     </div>
-    <div class="ui centered stackable grid">
+    <div class="ui centered stackable grid login-div">
         <div class="six wide column">
             <div class="ui segments" align="center">
                 <div class="ui inverted blue padded segment">
@@ -26,6 +26,30 @@
                     </form>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+
+<div class="ui modal connection-settings">
+    <i class="close icon"></i>
+    <div class="header">
+        Update Connection
+    </div>
+    <div class="content">
+        <form class="ui form serverUrlForm">
+            <div class="field">
+                <label>Server URL</label>
+                <input class="serverURL" type="text" placeholder="Server URL">
+            </div>
+        </form>
+    </div>
+    <div class="actions">
+        <div class="ui black deny button">
+            Cancel
+        </div>
+        <div class="ui positive right labeled icon button">
+            Save
+            <i class="checkmark icon"></i>
         </div>
     </div>
 </div>

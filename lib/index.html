@@ -45,14 +45,14 @@
 
 
     window.bims = {
-        endpointUrl: "http://192.168.0.30:6513/api/",
+        endpointUrl: "http://localhost:6513/api/",
         showPreloader: function() {
             $(".main-view-loader").addClass("active");
         },
         hidePreloader: function() {
             $(".main-view-loader").removeClass("active");
         },
-        imageLocations: "http://192.168.0.30:6513/images/"
+        imageLocations: "http://localhost:6513/images/"
     };
     var loginView = require('./js/views/login/loginView');
     window.bims.loginView = new loginView();
