@@ -1,26 +1,26 @@
 <h2><i class="table icon"></i> Resident Transactions </h2>
 <div class="ui divider"></div>
 <div class="ui action input">
-        <input type="text" placeholder="Search...">
+        <input class="rtSearch" type="text" placeholder="Search...">
         <select class="ui compact selection dropdown rtFilter">
-          <option selected value="all">All</option>
+          <option selected value="All">All</option>
           <option value="Name">Name</option>
           <option value="Zone">Zone</option>
         </select>
-        <div class="ui button">Search</div>
+        <div class="ui button rtBtnSearch">Search</div>
       </div>
 <div class="ui divider"></div>
 
-    <div class="ui three stackable cards">
+    <div class="ui four stackable cards rtCardContainer">
             <% _.each(residents, function (resident) { %>
-        <div class="card">
+        <!-- <div class="card">
           <div class="blurring dimmable image hovering-image">
             <div class="ui dimmer">
               <div class="content cardContainer" data-id='<%=resident.ID%>'>
                 <div class="center">
                     <div class="ui button btnDispenseMedicine">Dispense</div>
                     <br>
-                    <div class="ui button">View Transactions</div>
+                    <div class="ui button btnViewTransaction">View Transactions</div>
                     <br>
                     <div class="ui button">Print</div>
                 </div>
@@ -37,7 +37,26 @@
                 <span class="text"><%=resident.AddressZone %></span>
             </div>
           </div>
-        </div>
+        </div> -->
+
+        <div class="ui card transition visible" style="display: flex !important;">
+            <div class="image">
+              <img src="<%=window.bims.imageLocations + resident.Gender + '.png' %>">
+            </div>
+            <div class="content cardContainer" data-id="<%=resident.ID%>">
+              <a class="header"><%=resident.FirstName %> <%=resident.MiddleName %> <%=resident.LastName %></a>
+              <div class="meta">
+                <span class="date"><%=resident.FormattedBirthDate %></span>
+              </div>
+              <div class="description">
+                  <%=resident.AddressZone %>
+              </div>
+            </div>
+            <div class="extra content cardContainer" data-id="<%=resident.ID%>">
+              <div class="ui primary button btnDispenseMedicine">Add</div>
+              <div class="ui button btnViewTransaction">Delete</div>
+            </div>
+          </div>
         <% }) %>
       </div>
 

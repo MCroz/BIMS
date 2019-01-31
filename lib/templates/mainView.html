@@ -11,8 +11,6 @@
             <div class="ui secondary vertical menu">
                 <div class="header item">USER MENU</div>
                 <a href="" class="item">Profile <i class="user icon"></i></a>
-                <a href="" class="item">Groups <i class="users icon"></i></a>
-                <a href="" class="item">Settings <i class="settings icon"></i></a>
                 <div class="ui divider"></div>
                 <a href="index.html" class="item">Logout <i class="sign out icon"></i></a>
             </div>
@@ -448,6 +446,7 @@
     </div>
     <div class="content scrolling">
         <form class="ui form dmForm">
+            <input type="hidden" class="dmResidentId">
             <div class="three fields">
                 <div class="field">
                     <label>First Name</label>
@@ -487,7 +486,7 @@
                     </tr>
                 </thead>
                 <tbody class='dmMedicineItems'>
-                    <tr>
+                    <!-- <tr>
                         <td class='collapsing'>
                             <button class='ui icon button'>
                                 <i class='blue edit icon'></i>
@@ -500,12 +499,12 @@
                         <td>3213</td>
                         <td>656</td>
                         <td>dasdaksl</td>
-                    </tr>
+                    </tr> -->
                 </tbody>
             </table>
             <div class='field'>
                 <label>Prescription Description</label>
-                <textarea rows="2"></textarea>
+                <textarea class="dmPrescriptionDescription" rows="2"></textarea>
             </div>
         </form>
     </div>
@@ -526,32 +525,67 @@
         Select Medidicine
     </div>
     <div class="scrolling content">
-        <form class="ui form dmForm">
-            <table class="ui compact celled definition table dmAddMedicineTable">
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th>Medicine Name</th>
-                        <th>Description</th>
-                        <th>Expiration Date</th>
-                        <th>Stocks on Hand</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody class='dmAddMedicineTableBody'>
-                    <tr data-id="">
-                        <td class="collapsing">
-                            <button class="ui icon button">
-                                <i class="blue edit icon"></i>
-                            </button>
-                        </td>
-                        <td>Med Name</td>
-                        <td>Med Desc</td>
-                        <td>Qty</td>
-                        <td>Expiration Date</td>
-                    </tr>
-                </tbody>
-            </table>            
+        <form class="ui form dmAddForm">
+     
         </form>
+    </div>
+</div>
+
+<div class="ui coupled modal stocks-view-modal">
+    <i class="close icon"></i>
+    <div class="header">
+        View Stock
+    </div>
+    <div class="scrolling content">
+        <form class="ui form svForm">
+        
+        </form>
+    </div>
+</div>
+
+<div class="ui large modal vtModal">
+    <i class="close icon"></i>
+    <div class="header">
+        View All Transactions
+    </div>
+    <div class="scrolling content">
+        <div class="ui top attached tabular menu vtMenu">
+            <a class="item active" data-tab="first">Medicines</a>
+            <a class="item" data-tab="second">Indigency</a>
+            <a class="item" data-tab="third">Clearance</a>
+        </div>
+        <div class="ui bottom attached tab segment active" data-tab="first">
+            Medicines
+        </div>
+        <div class="ui bottom attached tab segment" data-tab="second">
+            Indigency
+        </div>
+        <div class="ui bottom attached tab segment" data-tab="third">
+            Clearance
+            <div class="ui three doubling stackable cards">
+                    <div class="ui card">
+                      <div class="image">
+                        <div class="ui placeholder">
+                          <div class="square image"></div>
+                        </div>
+                      </div>
+                      <div class="content">
+                        <div class="ui placeholder">
+                          <div class="header">
+                            <div class="very short line"></div>
+                            <div class="medium line"></div>
+                          </div>
+                          <div class="paragraph">
+                            <div class="short line"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="extra content">
+                        <div class="ui disabled primary button">Add</div>
+                        <div class="ui disabled button">Delete</div>
+                      </div>
+                    </div>
+                  </div>
+        </div>
     </div>
 </div>
