@@ -23,7 +23,7 @@
             <div class="side menu" id="sideMenu">
                 <div align="center" class="profile">
                     <br>
-                    <a href=""><img src="assets/img/people_4.jpg" alt="Marry Doe" class="ui circular image" width="150px"></a>
+                    <a href=""><img src="<%=window.bims.imageLocations + 'bims-logo.png' %>" alt="BIMS" class="ui image" width="150px"></a>
                     <div class="ui white header"><%=window.bims.currentUser.fname + " " + window.bims.currentUser.mname + " " + window.bims.currentUser.lname %></div>
                     <div class="ui divider"></div>
                 </div>
@@ -231,10 +231,12 @@
                 </div>
             </div>
             <div class="field">
+                <img class="ui middle aligned tiny image crImagePreview" src="">
                 <button class="ui labeled icon button crUploadImage">
                     <i class="upload icon"></i>Upload Image
                 </button>
-                <input style="display: none;" type="file" class="crImage"> 
+                <input style="display: none;" type="file" class="crImage" name="crImage"> 
+                <input style="display: none;" type="text" class="crImageURL"> 
             </div>
         </form>
     </div>
@@ -255,7 +257,7 @@
         Edit Resident
     </div>
     <div class="content">
-        <form class="ui form crForm">
+        <form class="ui form erForm">
             <div class="three fields">
                 <div class="field">
                     <label>First Name</label>
@@ -586,6 +588,15 @@
                       </div>
                     </div>
                   </div>
+        </div>
+    </div>
+</div>
+
+<div class="ui modal uploadLoadingModal">
+    <div class="content">
+        <div class="ui indicating progress imageUploadProgress">
+            <div class="bar"></div>
+            <div class="label imageUploadLabel"></div>
         </div>
     </div>
 </div>

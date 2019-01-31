@@ -11,7 +11,7 @@
       </div>
 <div class="ui divider"></div>
 
-    <div class="ui four stackable cards rtCardContainer">
+    <div class="ui five stackable cards rtCardContainer">
             <% _.each(residents, function (resident) { %>
         <!-- <div class="card">
           <div class="blurring dimmable image hovering-image">
@@ -39,9 +39,10 @@
           </div>
         </div> -->
 
-        <div class="ui card transition visible" style="display: flex !important;">
-            <div class="image">
-              <img src="<%=window.bims.imageLocations + resident.Gender + '.png' %>">
+        <div class="ui card transition visible cardContainer" data-id="<%=resident.ID%>" style="display: flex !important;">
+            <div class="image div-img-fit">
+              <!-- <img src="<%=window.bims.imageLocations + resident.Gender + '.png' %>"> -->
+              <img class="img-fit" src="<%=resident.Image == '' || resident.Image == null ? window.bims.imageLocations + resident.Gender + '.png' : window.bims.imageLocations + 'ResidentImages/' + resident.Image %>">
             </div>
             <div class="content cardContainer" data-id="<%=resident.ID%>">
               <a class="header"><%=resident.FirstName %> <%=resident.MiddleName %> <%=resident.LastName %></a>
@@ -52,9 +53,17 @@
                   <%=resident.AddressZone %>
               </div>
             </div>
-            <div class="extra content cardContainer" data-id="<%=resident.ID%>">
-              <div class="ui primary button btnDispenseMedicine">Add</div>
-              <div class="ui button btnViewTransaction">Delete</div>
+            <div class="ui bottom attached button btnDispenseMedicine">
+              <i class="add icon"></i>
+              Dispense
+            </div>
+            <div class="ui bottom attached button btnViewTransaction">
+              <i class="add icon"></i>
+              View Transaction
+            </div>
+            <div class="ui bottom attached button">
+              <i class="add icon"></i>
+              Print
             </div>
           </div>
         <% }) %>

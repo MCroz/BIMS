@@ -10,7 +10,7 @@ body {
 }
 .ui.fixed.top.menu {
   background-color: #005BAB;
-  z-index: 9999;
+  /* z-index: 9999; */
 }
 .ui.fixed.top.menu .item {
   color: #FFFFFF;
@@ -115,4 +115,15 @@ body {
 .loginBackground {
   padding-top: 10%;
   background-color: #80b6e6;
+}
+
+.img-fit {
+  object-fit: contain;
+  max-height: 150px;
+  min-height: 150px;
+}
+
+.div-img-fit {
+  max-height: 150px;
+  min-height: 150px;
 }
