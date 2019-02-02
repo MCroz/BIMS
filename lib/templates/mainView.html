@@ -24,7 +24,7 @@
                 <div align="center" class="profile">
                     <br>
                     <a href=""><img src="<%=window.bims.imageLocations + 'bims-logo.png' %>" alt="BIMS" class="ui image" width="150px"></a>
-                    <div class="ui white header"><%=window.bims.currentUser.fname + " " + window.bims.currentUser.mname + " " + window.bims.currentUser.lname %></div>
+                    <div class="ui white header"><%=window.bims.currentUser.FirstName + " " + window.bims.currentUser.MiddleName + " " + window.bims.currentUser.LastName %></div>
                     <div class="ui divider"></div>
                 </div>
                 <div class="ui fluid vertical menu" id="verticalMenu">
@@ -324,6 +324,14 @@
                     <input class="erCitizenship" type="text" placeholder="Citizenship">
                 </div>
             </div>
+            <div class="field">
+                <img class="ui middle aligned tiny image erImagePreview" src="">
+                <button class="ui labeled icon button erUploadImage">
+                    <i class="upload icon"></i>Upload Image
+                </button>
+                <input style="display: none;" type="file" class="erImage" name="crImage"> 
+                <input style="display: none;" type="text" class="erImageURL"> 
+            </div>
         </form>
     </div>
     <div class="actions">
@@ -597,6 +605,37 @@
         <div class="ui indicating progress imageUploadProgress">
             <div class="bar"></div>
             <div class="label imageUploadLabel"></div>
+        </div>
+    </div>
+</div>
+
+<div class="ui modal resident-print-modal">
+    <i class="close icon"></i>
+    <div class="header">
+        Print
+    </div>
+    <div class="content">
+        <form class="ui form rpForm">
+            <input type="hidden" class="rpResidentID">
+            <div class="two fields">
+                <div class="field">
+                    <label>Certificate</label>
+                    <div class="ui selection dropdown rpCertificate">
+                        <div class="text">Certificate</div>
+                        <i class="dropdown icon"></i>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Purpose</label>
+                    <input class="rpPurpose" type="text" placeholder="Purpose">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="actions">
+        <div class="ui ok blue right labeled icon button">
+            Print
+            <i class="print icon"></i>
         </div>
     </div>
 </div>

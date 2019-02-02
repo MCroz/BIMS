@@ -10,6 +10,7 @@
         "electron-pdf-window": "^1.0.12",
         "electron-reload": "^1.4.0",
         "html-pdf": "^2.2.0",
+        "imageurl-base64": "^1.0.0",
         "jquery": "^3.1.0",
         "jquery.nicescroll": "^3.7.6",
         "moment": "^2.24.0",
