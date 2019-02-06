@@ -24,10 +24,11 @@
                         </div>
                         <button class="ui big fluid blue icon button btnLogin" type="submit">Sign In <i class="sign in icon"></i></button>
                     </form>
-                </div>
+                    <div class="ui message btnForgotPassword"><a href="#">Forgot Password</a></div>
             </div>
         </div>
     </div>
+</div>
 </div>
 
 <div class="ui modal connection-settings">
@@ -49,6 +50,52 @@
         </div>
         <div class="ui positive right labeled icon button">
             Save
+            <i class="checkmark icon"></i>
+        </div>
+    </div>
+</div>
+
+<div class="ui modal forgot-password">
+    <i class="close icon"></i>
+    <div class="header">
+        Forgot Password
+    </div>
+    <div class="content">
+        <form class="ui form forgotPassForm">
+            <div class="field">
+                <label>Username</label>
+                <input class="fpUsername" type="text" placeholder="Username">
+            </div>
+            <div class="field">
+                <label>Secret Question #1</label>
+                <div class="ui selection dropdown fpSQ1">
+                    <div class="default text">Secret Question #1</div>
+                    <i class="dropdown icon"></i>
+                </div>
+            </div>
+            <div class='field'>
+                <label>Secret Answer #1</label>
+                <input class="fpSA1" type="text" placeholder="Secret Answer #1">
+            </div>
+            <div class="field">
+                <label>Secret Question #2</label>
+                <div class="ui selection dropdown fpSQ2">
+                    <div class="default text">Secret Question #2</div>
+                    <i class="dropdown icon"></i>
+                </div>
+            </div>
+            <div class='field'>
+                <label>Secret Answer #2</label>
+                <input class="fpSA2" type="text" placeholder="Secret Answer #2">
+            </div>
+        </form>
+    </div>
+    <div class="actions">
+        <div class="ui black deny button">
+            Cancel
+        </div>
+        <div class="ui positive right labeled icon button">
+            Submit
             <i class="checkmark icon"></i>
         </div>
     </div>

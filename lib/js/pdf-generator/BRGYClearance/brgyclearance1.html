@@ -1,0 +1,239 @@
+<html>
+  <head>
+    <meta charset="utf8">
+    <title>Barangay Clearance</title>
+    <style>
+      .page {
+        margin: 0;
+        height: 1056px;
+        width: 816px;
+        border: thin solid black;
+      }
+      @media all {
+        .first-header-page {
+          background-color: yellow;
+          height: 26px;
+          width: 100%;
+          margin: 0;
+          border-bottom: thin black;
+        }
+        .main-header-page {
+          width: 100%;
+          background-color: white;
+          border-bottom: thin solid black;
+          height: 1.75in;
+          display: flex;
+          align-items: flex-start;
+        }
+        .logo-container {
+          margin: 0;
+
+          width: 1.55in;
+          height: 1.55in;
+          padding-left: .1in;
+          padding-right: .1in;
+          padding-top: .1in;
+          padding-bottom: .1in;
+        }
+        .logo-container2{
+          margin-top:20;
+          margin-left:20;
+          border: thin solid black;
+          width: 1.55in;
+          height: 1.55in;
+          padding-left: .1in;
+          padding-right: .1in;
+          padding-top: .1in;
+          padding-bottom: .1in;
+        }
+        .container{
+          margin:0;
+
+          display: flex;
+          align-items: flex-start;
+          width: 100%;
+          height: 2.5in;
+        }
+        .lining1{
+          margin-left: 5;
+
+          padding-top: .1in;
+          padding-left: .5in;
+          width:60%;
+          height: 2.5in;
+          font-size: 17;
+        }
+        .lining2{
+          margin: 3;
+
+
+          width:95%;
+          height: 2.5in;
+          align-items: flex-start;
+          font-size: 17;
+        }
+
+        .mainbodypage{
+          width: 100%;
+          height: 82.5%;
+          background-color: red;
+
+          display: flex;
+          align-items: flex-start;
+        }
+        .yellowcontainer{
+          margin: 0;
+          width: 35%;
+          height: 100%;
+          background-color: yellow;
+
+        }
+        .whitecontainer{
+          margin: 0;
+          width: 65%;
+          height: 100%;
+
+          background-color: white;
+
+        }
+        .left{
+          padding-left: 6%;
+        }
+
+        .right{
+          padding-right: 2%;
+        }
+        .footer{
+          width: 100%;
+          height: 35px;
+          background-color: yellow;
+          border-top: thin solid black;
+          display: flex;
+          align-items: flex-start;
+
+        }
+        .paddingtoptext {
+          padding-top: 5%;
+        }
+        .buting-logo {
+          height: 100%;
+          width: 100%;
+        }
+        .center-header {
+          width: 5in;
+          height: 100%;
+        }
+      }
+      @media print {
+        body {
+          background: white;
+        }
+        .page {
+          margin: 0;
+          height: 100%;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class='page' style="background-color:white;">
+      <div class='first-header-page'></div>
+      <div class='main-header-page'>
+          <div class='logo-container'>
+            <img src="{{brgyLogo}}" class='buting-logo'  alt="buting-logo">
+          </div>
+          <div class='center-header' align="center">
+            <p class="paddingtoptext"><font face="Arial">REPUCLIC OF THE PHILIPPINES<br>
+            CITY GOVERNMENT OF PASIG<br>
+            <font face="Arial" size="5"><b>BARANGAY BUTING</b></font><br><font size="2">NO.2 CONCHING ST PASIG CITY</font><br>TEL NO. 641-1140/642-726</p>
+          </div>
+          <div class='logo-container'>
+            <img class='buting-logo' src="{{pasigLogo}}">
+          </div>
+      </div>
+      <div class="mainbodypage">
+        <div class="yellowcontainer">
+          <div align="center"><br><br><br><br><br><br><br><font size="4.5"><b>HON. EVELYN G. TUANO</b><br></font>
+            <font size="2"><i>PUNONG BARANGAY</i></font>
+            <br><br><br><br><br><br><br><br>
+            <font size="2"><i>BARANGAY COUNCIL</i></font>
+            <br><br>
+            <font size="4"><b>Jaymer C. Mallari</b></font>
+            <br><br>
+            <font size="4"><b>Jeffrey M. Catura</b></font>
+            <br><br>
+            <font size="4"><b>Donna H. Oliva</b></font>
+            <br><br>
+            <font size="4"><b>Baby Lynn S. Tero</b></font>
+            <br><br>
+            <font size="4"><b>Ronni R. San Pendro</b></font>
+            <br><br>
+            <font size="4"><b>Avelino A. Santos Jr.</b></font>
+            <br><br>
+            <font size="4"><b>Petronilo B. Cruz</b></font>
+            <br><br><br><br><br><br><br><br><br>
+            <font size="4"><b>Michael V. Landicho</b></font>
+            <br>
+            <font size="2"><i>BARANGAY SECRETARY</i></font>
+            <br><br><br><br>
+            <font size="4"><b>Esmeralda M. Pangulayan</b></font>
+            <br>
+            <font size="2"><i>BARANGAY TREASURER</i></font>
+          </div>
+
+
+        </div>
+
+
+        <div class="whitecontainer">
+
+          <br><br>
+          <div class="">
+            <h2 align="center"><font face="Century-Gothic"><u>BARANGAY CLEARANCE</u></font></h2>
+          </div>
+          <br>
+          <div class="container">
+
+            <div class="logo-container2">
+              <img src="{{Image}}"></img>
+
+            </div>
+            <div class="lining1">
+              <br><font size="5">This is to certify that<br><br>{{FullName}}<br>of Legal age, is a resident<br>
+              of this BARANGAY <br>with postal and <br>residential address at {{FullAddress}}</font>
+            </div>
+
+          </div>
+          <div class="lining2" align="center">_______________________________________________<br><br>
+            <div class="left" align="left"><font size="5">and she is further certified belong to an <br>
+            intelligent family<br><br>
+            This BARANGAY CLEARANCE<br>has been signed and issued to the bearer for the whatever<br>legal intent it may serve best
+            <br><br><br><br>
+            Done this {{Date}} at<br>
+            Barangay Buting, Pasig City<br><br><br><br>({{Purpose}})
+            </font>
+            <br><br><br>
+            </div>
+            <div class="right" align="right"><font size="5"><br>HON. EVELYN G. TUANO</font></div>
+            <div class="right" align="right"><font size="5"><i>Punong Barangay</i></font></div><br><br><br><br>
+            <div align=left><font size="5">CONTROL NO: {{ControlNo}}</font>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+
+      <div class="footer">
+        <p align="center"><font face="Arial" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"LAGING ANGAT ANG TAPAT SA SAMA-SAMANG PAGLILINGKO TUNGO SA KAUNLARANG HINAHANGAD"</font></p>
+
+      </div>
+
+
+
+
+    </div>
+  </body>
+</html>

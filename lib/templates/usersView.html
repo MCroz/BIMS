@@ -13,6 +13,7 @@
         <th>Last Name</th>
         <th>Username</th>
         <th>Position</th>
+        <th>Status</th>
         </tr>
     </thead>
     <tbody>
@@ -31,12 +32,13 @@
                     <td><%= user.LastName %></td>
                     <td><%= user.Username %></td>
                     <td><%= user.Role %></td>
+                    <td><%= user.Attempt >= 4 ? 'Blocked' : 'Active' %></td>
                 </tr>
         <% }); %>
     </tbody>
     <tfoot class="full-width">
         <tr>
-            <th colspan="6">
+            <th colspan="7">
                 <div class="ui left floated small primary labeled icon button btnAddUser">
                     <i class="user icon"></i> Add User
                 </div>
