@@ -561,43 +561,92 @@
         View All Transactions
     </div>
     <div class="scrolling content">
-        <div class="ui top attached tabular menu vtMenu">
-            <a class="item active" data-tab="first">Medicines</a>
-            <a class="item" data-tab="second">Indigency</a>
-            <a class="item" data-tab="third">Clearance</a>
+        <div class="ui top attached tabular menu vtMenu" data-id="">
+            <a class="item tabBtnMedicines" data-tab="Medicines">Medicines</a>
+            <a class="item tabBtnIndigency" data-tab="Indigency">Indigency</a>
+            <a class="item tabBtnClearance" data-tab="Clearance">Clearance</a>
         </div>
-        <div class="ui bottom attached tab segment active" data-tab="first">
-            Medicines
+        <div class="ui bottom attached tab segment active" data-tab="Medicines">
+            <div class="ui dimmer active DispenseTransactionsLoader">
+                <div class="ui indeterminate text loader">Loading...</div>
+            </div>
+            <table class="ui inverted grey table dispenseTransactionsDatatable">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Dispensed By</th>
+                            <th>Dispensed Date</th>
+                            <th>Prescription Description</th>
+                        </tr>
+                    </thead>
+                    <tbody class='dispenseTransactionsTableBody'>
+
+                    </tbody>
+                </table>
         </div>
-        <div class="ui bottom attached tab segment" data-tab="second">
-            Indigency
-        </div>
-        <div class="ui bottom attached tab segment" data-tab="third">
-            Clearance
-            <div class="ui three doubling stackable cards">
-                    <div class="ui card">
-                      <div class="image">
-                        <div class="ui placeholder">
-                          <div class="square image"></div>
-                        </div>
-                      </div>
-                      <div class="content">
-                        <div class="ui placeholder">
-                          <div class="header">
-                            <div class="very short line"></div>
-                            <div class="medium line"></div>
-                          </div>
-                          <div class="paragraph">
-                            <div class="short line"></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="extra content">
-                        <div class="ui disabled primary button">Add</div>
-                        <div class="ui disabled button">Delete</div>
-                      </div>
+        <div class="ui bottom attached tab segment" data-tab="Indigency">
+                <div class="ui dimmer active">
+                        <div class="ui indeterminate text loader">Loading...</div>
                     </div>
-                  </div>
+                    <table class="ui inverted grey table indigencyTransactionsDatatable">
+                        <thead>
+                            <tr>
+                                <th>Options</th>
+                                <th>Medicine Name</th>
+                                <th>Description</th>
+                                <th>Expiration Date</th>
+                                <th>Quantity</th>
+                            </tr>
+                        </thead>
+                        <tbody class=''>
+                            <!-- <tr>
+                                <td class='collapsing'>
+                                    <button class='ui icon button'>
+                                        <i class='blue edit icon'></i>
+                                    </button>
+                                    <button class='ui icon button'>
+                                        <i class='red trash icon'></i>
+                                    </button>
+                                </td>
+                                <td>dsadas</td>
+                                <td>3213</td>
+                                <td>656</td>
+                                <td>dasdaksl</td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+        </div>
+        <div class="ui bottom attached tab segment" data-tab="Clearance">
+                <div class="ui dimmer active">
+                        <div class="ui indeterminate text loader">Loading...</div>
+                    </div>
+                    <table class="ui inverted grey table clearanceTransactionsDatatable">
+                        <thead>
+                            <tr>
+                                <th>Options</th>
+                                <th>Medicine Name</th>
+                                <th>Description</th>
+                                <th>Expiration Date</th>
+                                <th>Quantity</th>
+                            </tr>
+                        </thead>
+                        <tbody class=''>
+                            <!-- <tr>
+                                <td class='collapsing'>
+                                    <button class='ui icon button'>
+                                        <i class='blue edit icon'></i>
+                                    </button>
+                                    <button class='ui icon button'>
+                                        <i class='red trash icon'></i>
+                                    </button>
+                                </td>
+                                <td>dsadas</td>
+                                <td>3213</td>
+                                <td>656</td>
+                                <td>dasdaksl</td>
+                            </tr> -->
+                        </tbody>
+                    </table>
         </div>
     </div>
 </div>
