@@ -29,14 +29,32 @@
                 </div>
                 <div class="ui fluid vertical menu" id="verticalMenu">
                 <!-- <div class="ui fluid vertical menu" id="verticalMenu" style="background-color: #569edd;height: 100%;max-height: none;"> -->
+                    
                     <a href="#" class="item btnTest"><i class="dashboard icon"></i> <span>Dashboard</span></a>
+                    
+                    
                     <a href="#" class="item btnSideResidents"><i class="book icon"></i> <span>Residents</span></a>
+                    
+
+                    <% if (window.bims.currentUser.Role == 'Administrator') { %>
                     <a href="#" class="item btnSideUsers"><i class="table icon"></i> <span>Users</span></a>
+                    <% } %>
+
+                    <% if (window.bims.currentUser.Role == 'Administrator' || window.bims.currentUser.Role == 'Inventory/Medicine Staff') { %>
                     <a href="#" class="item btnMedicinesMasterList"><i class="pills icon"></i> <span>Medicine Master List</span></a>
+                    
                     <a href="#" class="item btnInventory"><i class="block layout icon"></i> <span>Medicine Inventory</span></a>
+                    <% } %>
+
                     <a href="#" class="item btnResidentTransactions"><i class="tasks icon"></i> <span>Residents Transaction</span></a>
+                    
+                    <% if (window.bims.currentUser.Role == 'Administrator' || window.bims.currentUser.Role == 'Document Staff') { %>
                     <a href="#" class="item"><i class="sign in icon"></i> <span>Business Permit</span></a>
+                    <% } %>
+
+                    <% if (window.bims.currentUser.Role == 'Administrator') { %>
                     <a href="#" class="item"><i class="sign in icon"></i> <span>Reports</span></a>
+                    <% } %>
                 </div>
             </div>
             <div class="sixteen wide column" id="content">
@@ -494,6 +512,7 @@
                         <th>Medicine Name</th>
                         <th>Description</th>
                         <th>Expiration Date</th>
+                        <th>Current Stock</th>
                         <th>Quantity</th>
                     </tr>
                 </thead>

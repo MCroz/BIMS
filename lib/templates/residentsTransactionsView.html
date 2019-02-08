@@ -53,18 +53,25 @@
                   <%=resident.AddressZone %>
               </div>
             </div>
+            <% if (window.bims.currentUser.Role == 'Inventory/Medicine Staff') { %>
             <div class="ui bottom attached button btnDispenseMedicine">
               <i class="add icon"></i>
               Dispense
             </div>
+            <% } %>
+
             <div class="ui bottom attached button btnViewTransaction">
               <i class="add icon"></i>
               View Transaction
             </div>
+
+            <% if (window.bims.currentUser.Role == 'Document Staff') { %>
             <div class="ui bottom attached button btnCardPrint">
               <i class="add icon"></i>
               Print
             </div>
+            <% } %>
+
           </div>
         <% }) %>
       </div>
