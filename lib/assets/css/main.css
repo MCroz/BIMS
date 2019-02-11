@@ -57,7 +57,7 @@ body {
   border-radius: 0;
   box-shadow: none;
   border: none;
-  max-height: 320px;
+  max-height: 360px;
   overflow-y: scroll;
 }
 @media (max-width: 768px) {

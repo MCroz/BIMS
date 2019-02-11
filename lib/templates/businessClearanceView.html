@@ -1,0 +1,46 @@
+<h2><i class="table icon"></i> Business List</h2>
+<div class="ui divider"></div>
+<!-- <div class="ui left icon input">
+    <input class="userTabSearch" type="text" placeholder="Search users...">
+    <i class="users icon"></i>
+</div> -->
+<table class="ui compact celled definition table businessListDataTable">
+    <thead>
+        <tr>
+        <th></th>
+        <th>Owner Name</th>
+        <th>Owner Contact No.</th>
+        <th>Business Name</th>
+        <th>Business Address</th>
+        <th>Floor Area</th>
+        <th>DTI/SEC Reg. No.</th>
+        <th>Business Contact No.</th>
+        <th>Kind Of Business</th>
+        <th>Capitalization</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% _.each(businesses, function (business) { %>
+            <tr data-id="<%= business.ID %>">
+                    <td class="collapsing">
+                        <button class="ui icon button btnViewPrintHistory">
+                            <i class="blue eye icon"></i>
+                        </button>
+                        <button class="ui icon button btnOpenPrintBusinessClearance">
+                            <i class="red print icon"></i>
+                        </button>
+                    </td>
+                    <td><%= business.OwnerName %></td>
+                    <td><%= business.OwnerAddress %></td>
+                    <td><%= business.BusinessName %></td>
+                    <td><%= business.BusinessAddress %></td>
+                    <td><%= business.FloorArea %></td>
+                    <td><%= business.DTI_SEC_RegNo %></td>
+                    <td><%= business.BusinessContactNo %></td>
+                    <td><%= business.KindOfBusiness %></td>
+                    <td><%= business.formattedCurrency %></td>
+                </tr>
+        <% }); %>
+    </tbody>
+</table>
+

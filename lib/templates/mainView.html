@@ -30,7 +30,7 @@
                 <div class="ui fluid vertical menu" id="verticalMenu">
                 <!-- <div class="ui fluid vertical menu" id="verticalMenu" style="background-color: #569edd;height: 100%;max-height: none;"> -->
                     
-                    <a href="#" class="item btnTest"><i class="dashboard icon"></i> <span>Dashboard</span></a>
+                    <a href="#" class="item btnDashboard"><i class="dashboard icon"></i> <span>Dashboard</span></a>
                     
                     
                     <a href="#" class="item btnSideResidents"><i class="book icon"></i> <span>Residents</span></a>
@@ -49,7 +49,8 @@
                     <a href="#" class="item btnResidentTransactions"><i class="tasks icon"></i> <span>Residents Transaction</span></a>
                     
                     <% if (window.bims.currentUser.Role == 'Administrator' || window.bims.currentUser.Role == 'Document Staff') { %>
-                    <a href="#" class="item"><i class="sign in icon"></i> <span>Business Clearance</span></a>
+                    <a href="#" class="item btnBusinessOwners"><i class="sign in icon"></i> <span>Business Owners</span></a>    
+                    <a href="#" class="item btnBusinessClearance"><i class="sign in icon"></i> <span>Business Clearance</span></a>
                     <% } %>
 
                     <% if (window.bims.currentUser.Role == 'Administrator') { %>
@@ -710,6 +711,401 @@
                     <td>656</td>
                     <td>dasdaksl</td>
                 </tr> -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="ui modal add-owner-modal">
+    <i class="close icon"></i>
+    <div class="header">
+        Add Owner
+    </div>
+    <div class="scrolling content">
+        <form class="ui form aoForm">
+            <div class="three fields">
+                <div class="field">
+                    <label>First Name</label>
+                    <input class="aoFname" type="text" placeholder="First Name">
+                </div>
+                <div class="field">
+                    <label>Middle Name</label>
+                    <input class="aoMname" type="text" placeholder="Middle Name">
+                </div>
+                <div class="field">
+                    <label>Last Name</label>
+                    <input class="aoLname" type="text" placeholder="Last Name">
+                </div>
+            </div>
+            <div class="two fields">
+                <div class="field">
+                    <label>Address</label>
+                    <input class="aoAddress" type="text" placeholder="Address">
+                </div>
+                <div class="field">
+                    <label>Contact No.</label>
+                    <input class="aoContactNo" type="text" placeholder="Contact No.">
+                </div>
+            </div>
+            <div class="field">
+                <img class="ui middle aligned tiny image aoImagePreview" src="">
+                <button class="ui labeled icon button aoUploadImage">
+                    <i class="upload icon"></i>Upload Image
+                </button>
+                <input style="display: none;" type="file" class="aoImage" name="aoImage"> 
+                <input style="display: none;" type="text" class="aoImageURL">
+            </div>
+            <button class="ui right floated middle aligned labeled icon button aoAddBusiness">
+                <i class="add icon"></i>Add Business
+            </button>
+        </form>
+        <table class="ui inverted grey table aoBusinessTable">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Business Name</th>
+                    <th>Business Address</th>
+                    <th>Floor Area</th>
+                    <th>DTI/SEC Reg. No.</th>
+                    <th>Business Contact No.</th>
+                    <th>Kind of Business</th>
+                    <th>Capitalization</th>
+                </tr>
+            </thead>
+            <tbody class='aoBusinessTableBody' >
+
+            </tbody>
+        </table>
+    </div>
+    <div class="actions">
+        <div class="ui black deny button">
+            Cancel
+        </div>
+        <div class="ui positive right labeled icon button">
+            Save
+            <i class="checkmark icon"></i>
+        </div>
+    </div>
+</div>
+
+<div class="ui modal edit-owner-modal">
+    <i class="close icon"></i>
+    <div class="header">
+        Update Owner
+    </div>
+    <div class="content">
+        <form class="ui form eoForm">
+            <div class="three fields">
+                <div class="field">
+                    <label>First Name</label>
+                    <input class="eoFname" type="text" placeholder="First Name">
+                </div>
+                <div class="field">
+                    <label>Middle Name</label>
+                    <input class="eoMname" type="text" placeholder="Middle Name">
+                </div>
+                <div class="field">
+                    <label>Last Name</label>
+                    <input class="eoLname" type="text" placeholder="Last Name">
+                </div>
+            </div>
+            <div class="two fields">
+                <div class="field">
+                    <label>Address</label>
+                    <input class="eoAddress" type="text" placeholder="Address">
+                </div>
+                <div class="field">
+                    <label>Contact No.</label>
+                    <input class="eoContactNo" type="text" placeholder="Contact No.">
+                </div>
+            </div>
+            <div class="field">
+                <img class="ui middle aligned tiny image eoImagePreview" src="">
+                <button class="ui labeled icon button eoUploadImage">
+                    <i class="upload icon"></i>Upload Image
+                </button>
+                <input style="display: none;" type="file" class="eoImage" name="eoImage"> 
+                <input style="display: none;" type="text" class="eoImageURL"> 
+            </div>
+        </form>
+        <button class="ui right floated middle aligned labeled icon button eoAddBusiness">
+                <i class="add icon"></i>Add Business
+            </button>
+        <table class="ui inverted grey table eoBusinessTable">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Business Name</th>
+                        <th>Business Address</th>
+                        <th>Floor Area</th>
+                        <th>DTI/SEC Reg. No.</th>
+                        <th>Business Contact No.</th>
+                        <th>Kind of Business</th>
+                        <th>Capitalization</th>
+                    </tr>
+                </thead>
+                <tbody class='eoBusinessTableBody' >
+                    
+                </tbody>
+            </table>
+    </div>
+    <div class="actions">
+        <div class="ui black deny button">
+            Cancel
+        </div>
+        <div class="ui positive right labeled icon button">
+            Save
+            <i class="checkmark icon"></i>
+        </div>
+    </div>
+</div>
+
+<div class="ui modal add-owner-add-business-modal">
+    <i class="close icon"></i>
+    <div class="header">
+        Add Business
+    </div>
+    <div class="content">
+        <form class="ui form aobForm">
+            <div class="two fields">
+                <div class="field">
+                    <label>Business Name</label>
+                    <input class="aobName" type="text" placeholder="Business Name">
+                </div>
+                <div class="field">
+                    <label>Business Address</label>
+                    <input class="aobAddress" type="text" placeholder="Business Address">
+                </div>
+            </div>
+            <div class="three fields">
+                <div class="field">
+                    <label>Floor Area</label>
+                    <input class="aobFloorArea" type="text" placeholder="Floor Area">
+                </div>
+                <div class="field">
+                    <label>DTI/SEC Reg. No.</label>
+                    <input class="aobDTI_SEC_RegNo" type="text" placeholder="DTI/SEC Reg. No.">
+                </div>
+                <div class="field">
+                    <label>Capitalization</label>
+                    <input class="aobCapitalization" type="number" placeholder="Capitalization">
+                </div>
+            </div>
+            <div class="two fields">
+                <div class="field">
+                    <label>Contact No.</label>
+                    <input class="aobContactNo" type="text" placeholder="Contact No.">
+                </div>
+                <div class="field">
+                    <label>Kind of Business</label>
+                    <input class="aobKindOfBusiness" type="text" placeholder="Kind of Business">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="actions">
+        <div class="ui black deny button">
+            Cancel
+        </div>
+        <div class="ui positive right labeled icon button">
+            Save
+            <i class="checkmark icon"></i>
+        </div>
+    </div>
+</div>
+
+<div class="ui modal edit-owner-add-business-modal">
+    <i class="close icon"></i>
+    <div class="header">
+        Add Business
+    </div>
+    <div class="content">
+        <form class="ui form eobForm">
+            <div class="two fields">
+                <div class="field">
+                    <label>Business Name</label>
+                    <input class="eobName" type="text" placeholder="Business Name">
+                </div>
+                <div class="field">
+                    <label>Business Address</label>
+                    <input class="eobAddress" type="text" placeholder="Business Address">
+                </div>
+            </div>
+            <div class="three fields">
+                <div class="field">
+                    <label>Floor Area</label>
+                    <input class="eobFloorArea" type="text" placeholder="Floor Area">
+                </div>
+                <div class="field">
+                    <label>DTI/SEC Reg. No.</label>
+                    <input class="eobDTI_SEC_RegNo" type="text" placeholder="DTI/SEC Reg. No.">
+                </div>
+                <div class="field">
+                    <label>Capitalization</label>
+                    <input class="eobCapitalization" type="number" placeholder="Capitalization">
+                </div>
+            </div>
+            <div class="two fields">
+                <div class="field">
+                    <label>Contact No.</label>
+                    <input class="eobContactNo" type="text" placeholder="Contact No.">
+                </div>
+                <div class="field">
+                    <label>Kind of Business</label>
+                    <input class="eobKindOfBusiness" type="text" placeholder="Kind of Business">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="actions">
+        <div class="ui black deny button">
+            Cancel
+        </div>
+        <div class="ui positive right labeled icon button">
+            Save
+            <i class="checkmark icon"></i>
+        </div>
+    </div>
+</div>
+
+<div class="ui modal edit-owner-edit-business-modal">
+    <i class="close icon"></i>
+    <div class="header">
+        Edit Business
+    </div>
+    <div class="content">
+        <form class="ui form eoebForm">
+            <div class="two fields">
+                <div class="field">
+                    <label>Business Name</label>
+                    <input class="eoebName" type="text" placeholder="Business Name">
+                </div>
+                <div class="field">
+                    <label>Business Address</label>
+                    <input class="eoebAddress" type="text" placeholder="Business Address">
+                </div>
+            </div>
+            <div class="three fields">
+                <div class="field">
+                    <label>Floor Area</label>
+                    <input class="eoebFloorArea" type="text" placeholder="Floor Area">
+                </div>
+                <div class="field">
+                    <label>DTI/SEC Reg. No.</label>
+                    <input class="eoebDTI_SEC_RegNo" type="text" placeholder="DTI/SEC Reg. No.">
+                </div>
+                <div class="field">
+                    <label>Capitalization</label>
+                    <input class="eoebCapitalization" type="number" placeholder="Capitalization">
+                </div>
+            </div>
+            <div class="two fields">
+                <div class="field">
+                    <label>Contact No.</label>
+                    <input class="eoebContactNo" type="text" placeholder="Contact No.">
+                </div>
+                <div class="field">
+                    <label>Kind of Business</label>
+                    <input class="eoebKindOfBusiness" type="text" placeholder="Kind of Business">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="actions">
+        <div class="ui black deny button">
+            Cancel
+        </div>
+        <div class="ui positive right labeled icon button">
+            Save
+            <i class="checkmark icon"></i>
+        </div>
+    </div>
+</div>
+
+
+<div class="ui modal business-clearance-print-modal">
+    <i class="close icon"></i>
+    <div class="header">
+        Print Business Clearance
+    </div>
+    <div class="content">
+        <form class="ui form attached fluid segment">
+            <input type="hidden" class="bcBusinessID">
+            <div class="three fields">
+                <div class="field">
+                    <label>Owner Name</label>
+                    <label class='bcOwnerName'></label>
+                </div>
+                <div class="field">
+                    <label>Owner Address</label>
+                    <label class='bcOwnerAddress'></label>
+                </div>
+                <div class="field">
+                    <label>Owner Contact No.</label>
+                    <label class='bcOwnerContactNo'></label>
+                </div>
+            </div>
+            <div class="three fields">
+                <div class="field">
+                    <label>Business Name</label>
+                    <label class='bcBusinessName'></label>
+                </div>
+                <div class="field">
+                    <label>Business Address</label>
+                    <label class='bcBusinessAddress'></label>
+                </div>
+                <div class="field">
+                    <label>Business Contact No.</label>
+                    <label class='bcBusinessContactNo'></label>
+                </div>
+            </div>
+            <div class="two fields">
+                <div class="field">
+                    <label>Floor Area</label>
+                    <label class='bcBusinessFloorArea'></label>
+                </div>
+                <div class="field">
+                    <label>DTI/SEC Reg. No.</label>
+                    <label class='bcBusinessDTI'></label>
+                </div>
+            </div>
+            <div class="two fields">
+                <div class="field">
+                    <label>Kind of Business</label>
+                    <label class='bcKindOfBusiness'></label>
+                </div>
+                <div class="field">
+                    <label>Capitalization</label>
+                    <label class='bcBusinessCapitalization'></label>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="actions">
+        <div class="ui ok blue right labeled icon button">
+            Print
+            <i class="print icon"></i>
+        </div>
+    </div>
+</div>
+
+
+<div class="ui coupled modal view-print-history-modal">
+    <i class="close icon"></i>
+    <div class="header">
+        View Print History
+    </div>
+    <div class="scrolling content">
+        <table class="ui inverted grey table printHistoryDatatable">
+            <thead>
+                <tr>
+                    <th>Control No.</th>
+                    <th>Printed By</th>
+                    <th>Printed Date</th>
+                </tr>
+            </thead>
+            <tbody class='printHistoryDatatableBody'>
+                
             </tbody>
         </table>
     </div>
