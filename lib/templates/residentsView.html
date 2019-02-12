@@ -14,8 +14,7 @@
         <th>Gender</th>
         <th>Civil Status</th>
         <th>Birth Date</th>
-        <th>Address Number</th>
-        <th>Address Street</th>
+        <th>Address</th>
         <th>Address Zone</th>
         <th>Birth Place</th>
         <th>Citizenship</th>
@@ -38,8 +37,9 @@
                     <td><%= resident.Gender %></td>
                     <td><%= resident.CivilStatus %></td>
                     <td><%= resident.FormattedBirthDate %></td>
-                    <td><%= resident.AddressNo %></td>
-                    <td><%= resident.AddressSt %></td>
+                    <!-- <td><%= resident.AddressNo %></td>
+                    <td><%= resident.AddressSt %></td> -->
+                    <td><%= resident.Address %></td>
                     <td><%= resident.AddressZone %></td>
                     <td><%= resident.BirthPlace %></td>
                     <td><%= resident.Citizenship %></td>
@@ -48,7 +48,7 @@
     </tbody>
     <tfoot class="full-width">
         <tr>
-            <th colspan="12">
+            <th colspan="11">
                 <div class="ui left floated small primary labeled icon button btnAddResidents">
                     <i class="user icon"></i> Add Resident
                 </div>

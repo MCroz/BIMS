@@ -1,138 +1,98 @@
-<h2>Dashboard</h2>
-
-    <div class="ui horizontal divider">Analytics</div>
-    <div class="ui two column stackable grid">
+<!-- <h2>Dashboard</h2> -->
+<div class="ui horizontal divider">Analytics</div>
+<div class="ui segment">
+        <div class="ui breadcrumb">
+            <a href="#" class="section">Home</a>
+            <i class="right chevron icon divider"></i>
+            <a class="active section">Dashboard</a>
+        </div>
+    </div>
+    <div class="ui doubling four column grid">
         <div class="column">
-            <div class="ui styled fluid accordion">
-                <div class="active title">
-                    <i class="dropdown icon"></i> Web View <i class="signal icon"></i>
-                </div>
-                <div class="active content">
-                    <!-- <div id="barChart" class="chart element"></div> -->
-                    <canvas id="myChart" width="400" height="400"></canvas>
+            <div class="views">
+                <div class="icon-order"><i class="eye icon"></i></div>
+                <div class="detail"><h3>214</h3>Views</div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="orders">
+                <div class="icon-order"><i class="users icon"></i></div>
+                <div class="detail"><h3>54</h3>Customers
                 </div>
             </div>
         </div>
         <div class="column">
-            <div class="ui styled fluid accordion">
-                <div class="active title">
-                    <i class="dropdown icon"></i> Visitor <i class="user icon"></i>
-                </div>
-                <div class="active content">
-                    <div id="lineChart" class="chart element"></div>
+            <div class="new_orders">
+                <div class="icon-order"><i class="archive icon"></i></div>
+                <div class="detail"><h3>54</h3>Orders
                 </div>
             </div>
         </div>
-
         <div class="column">
-            <div class="ui styled fluid accordion">
-                <div class="active title">
-                    <i class="dropdown icon"></i> Latest Residents <i class="comment icon"></i>
-                </div>
-                <div class="active content">
-                    <div class="ui relaxed divided list">
-                        <div class="item">
-                            <img src="assets/img/people_1.jpg" class="ui avatar image" alt="">
-                            <div class="content">
-                                <a class="header">Alana Steve</a>
-                                <div class="description">cumque tempora repellendus qui  qui perspiciatis facere... <a href="">More</a> </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="assets/img/people_2.jpg" class="ui avatar image" alt="">
-                            <div class="content">
-                                <a class="header">Nathan Steven</a>
-                                <div class="description">eprehenderit quos illum doloribus  inventore doloribus hic ipsum... <a href="">More</a> </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="assets/img/people_3.jpg" class="ui avatar image" alt="">
-                            <div class="content">
-                                <a class="header">First Jr Doe</a>
-                                <div class="description">epellendus ducimus quae voluptas,  voluptas, nam necessitatibus... <a href="">More</a> </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="column">
-            <div class="ui styled fluid accordion">
-                <div class="active title">
-                    <i class="dropdown icon"></i> Latest Owner <i class="comment icon"></i>
-                </div>
-                <div class="active content">
-                    <div class="ui relaxed divided list">
-                        <div class="item">
-                            <img src="assets/img/people_1.jpg" class="ui avatar image" alt="">
-                            <div class="content">
-                                <a class="header">Alana Steve</a>
-                                <div class="description">cumque tempora repellendus qui  qui perspiciatis facere... <a href="">More</a> </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="assets/img/people_2.jpg" class="ui avatar image" alt="">
-                            <div class="content">
-                                <a class="header">Nathan Steven</a>
-                                <div class="description">eprehenderit quos illum doloribus  inventore doloribus hic ipsum... <a href="">More</a> </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="assets/img/people_3.jpg" class="ui avatar image" alt="">
-                            <div class="content">
-                                <a class="header">First Jr Doe</a>
-                                <div class="description">epellendus ducimus quae voluptas,  voluptas, nam necessitatibus... <a href="">More</a> </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="column">
-            <div class="ui styled fluid accordion">
-                <div class="active title">
-                    <i class="dropdown icon"></i> Country Visitor <i class="marker icon"></i>
-                </div>
-                <div class="active content">
-                    <div class="ui relaxed divided list">
-                        <div class="item">
-                            <a class="header">
-                                <i class="large middle aligned id flag"></i> Indonesia
-                                <span class="ui right floated green label">46</span>
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a class="header">
-                                <i class="large middle aligned us flag"></i> USA
-                                <span class="ui right floated label">23</span>
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a class="header">
-                                <i class="large middle aligned uk flag"></i> England
-                                <span class="ui right floated label">15</span>
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a class="header">
-                                <i class="large middle aligned ae flag"></i> United Arab Emirates
-                                <span class="ui right floated blue label">26</span>
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a class="header">
-                                <i class="large middle aligned sa flag"></i> Saudi Arabia
-                                <span class="ui right floated label">10</span>
-                            </a>
-                        </div>
-                    </div>
+            <div class="total">
+                <div class="icon-order"><i class="bar icon"></i></div>
+                <div class="detail"><h3>$5004</h3>Total
                 </div>
             </div>
         </div>
     </div>
-    <div class="ui divider"></div>
-    <div align="center">
-        Load in 0.3s Base build with Semantic-UI and jQuery and Author Muhibbudin Suretno
-    </div>
+    <div class="ui doubling two column grid">
+        <div class="column">
+            <div class="ui segment" style="box-shadow: none;">
+                <h3>Overview</h3>
+                <div class="ui divider"></div>
+                <script>
+                    $(function () {
+                        $('.overview.menu .item').tab();
+                    });
+                </script>
+                <div class="ui overview secondary pointing menu" style="border-width: 1px;">
+                    <a class="green item" data-tab="most-sold-dashboard">
+                        Best sellers
+                    </a>
+                    <a class="green item" data-tab="most-views-dashboard">
+                        Most views
+                    </a>
+                    <a class="green active item" data-tab="latest-dashboard">
+                        Latest
+                    </a>
+                </div>
+                <div class="ui tab" data-tab="most-sold-dashboard">
+                    Hej
+                </div>
+                <div class="ui tab" data-tab="most-views-dashboard">
+                    Hej
+                </div>
+                <div class="ui tab active" data-tab="latest-dashboard">
+                    <table class="ui table stripe" style="border-radius: 0px;">
+                        <tr>
+                            <thead>
+                            <th>Status</th>
+                            <th>Order.nr</th>
+                            <th>Date</th>
+                            <th>Price</th>
+                            </thead>
+                            <td>
+                                <select name="status" class="ui compact dropdown" id="selecter1">
+                                    <option value="1">Behandlas</option>
+                                    <option value="2">Bearbetas</option>
+                                    <option value="3">>Nekades</option>
+                                    <option value="4">Klar</option>
+                                    <option value="5">Klar/Betald</option>
+                                </select>
+                            </td>
+                            <td>1</td>
+                            <td>2016-09-09 20:02</td>
+                            <td>$435</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="ui segment">
+                <h3>Newsfeed</h3>
+                <div class="ui divider"></div>
+    
+            </div>
+        </div>

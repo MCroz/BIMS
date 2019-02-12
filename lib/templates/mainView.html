@@ -41,7 +41,7 @@
                     <% } %>
 
                     <% if (window.bims.currentUser.Role == 'Administrator' || window.bims.currentUser.Role == 'Inventory/Medicine Staff') { %>
-                    <a href="#" class="item btnMedicinesMasterList"><i class="pills icon"></i> <span>Medicine Master List</span></a>
+                    <!-- <a href="#" class="item btnMedicinesMasterList"><i class="pills icon"></i> <span>Medicine Master List</span></a> -->
                     
                     <a href="#" class="item btnInventory"><i class="block layout icon"></i> <span>Medicine Inventory</span></a>
                     <% } %>
@@ -185,6 +185,14 @@
     </div>
     <div class="content">
         <form class="ui form crForm">
+            <div class="field">
+                <img class="ui middle aligned tiny image crImagePreview" src="">
+                <button class="ui labeled icon button crUploadImage">
+                    <i class="upload icon"></i>Upload Image
+                </button>
+                <input style="display: none;" type="file" class="crImage" name="crImage"> 
+                <input style="display: none;" type="text" class="crImageURL"> 
+            </div>
             <div class="three fields">
                 <div class="field">
                     <label>First Name</label>
@@ -201,10 +209,23 @@
             </div>
             <div class="three fields">
                 <div class="field">
-                    <label>Gender</label>
+                    <!-- <label>Gender</label>
                     <div class="ui selection dropdown crGender">
                         <div class="default text">Gender</div>
                         <i class="dropdown icon"></i>
+                    </div> -->
+                    <label>Gender</label>
+                    <div class="field">
+                        <div class="ui radio checkbox crMale">
+                            <input type="radio" name="crGender" checked="" tabindex="0" class="hidden">
+                            <label>Male</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox crFemale">
+                            <input type="radio" name="crGender" checked="" tabindex="0" class="hidden">
+                            <label>Female</label>
+                        </div>
                     </div>
                 </div>
                 <div class="field">
@@ -224,15 +245,15 @@
                     </div>
                 </div>
             </div>
-            <div class="three fields">
+            <div class="two fields">
                 <div class='field'>
-                    <label>Address Number</label>
-                    <input class="crAddressNo" type="text" placeholder="Address Number">
+                    <label>Address</label>
+                    <input class="crAddress" type="text" placeholder="Address">
                 </div>
-                <div class='field'>
+                <!-- <div class='field'>
                     <label>Address Street</label>
                     <input class="crAddressSt" type="text" placeholder="Address Street">
-                </div>
+                </div> -->
                 <div class='field'>
                     <label>Address Zone</label>
                     <div class="ui selection dropdown crAddressZone">
@@ -247,17 +268,15 @@
                     <input class="crBirthPlace" type="text" placeholder="Birth Place">
                 </div>
                 <div class='field'>
+                    <!-- <label>Citizenship</label>
+                    <input class="crCitizenship" type="text" placeholder="Citizenship"> -->
                     <label>Citizenship</label>
-                    <input class="crCitizenship" type="text" placeholder="Citizenship">
+                    <div class="ui selection dropdown crCitizenship">
+                        <div class="default text">Citizenship</div>
+                        <i class="dropdown icon"></i>
+                    </div>
+                    <input class="crOtherCitizenship" type="text" placeholder="Others">
                 </div>
-            </div>
-            <div class="field">
-                <img class="ui middle aligned tiny image crImagePreview" src="">
-                <button class="ui labeled icon button crUploadImage">
-                    <i class="upload icon"></i>Upload Image
-                </button>
-                <input style="display: none;" type="file" class="crImage" name="crImage"> 
-                <input style="display: none;" type="text" class="crImageURL"> 
             </div>
         </form>
     </div>
@@ -279,6 +298,14 @@
     </div>
     <div class="content">
         <form class="ui form erForm">
+            <div class="field">
+                <img class="ui middle aligned tiny image erImagePreview" src="">
+                <button class="ui labeled icon button erUploadImage">
+                    <i class="upload icon"></i>Upload Image
+                </button>
+                <input style="display: none;" type="file" class="erImage" name="crImage"> 
+                <input style="display: none;" type="text" class="erImageURL"> 
+            </div>
             <div class="three fields">
                 <div class="field">
                     <label>First Name</label>
@@ -295,10 +322,23 @@
             </div>
             <div class="three fields">
                 <div class="field">
-                    <label>Gender</label>
+                    <!-- <label>Gender</label>
                     <div class="ui selection dropdown erGender">
                         <div class="default text">Gender</div>
                         <i class="dropdown icon"></i>
+                    </div> -->
+                    <label>Gender</label>
+                    <div class="field">
+                        <div class="ui radio checkbox erMale">
+                            <input type="radio" name="erGender" checked="" tabindex="0" class="hidden">
+                            <label>Male</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox erFemale">
+                            <input type="radio" name="erGender" checked="" tabindex="0" class="hidden">
+                            <label>Female</label>
+                        </div>
                     </div>
                 </div>
                 <div class="field">
@@ -318,15 +358,15 @@
                       </div>
                 </div>
             </div>
-            <div class="three fields">
+            <div class="two fields">
                 <div class='field'>
-                    <label>Address Number</label>
-                    <input class="erAddressNo" type="text" placeholder="Address Number">
+                    <label>Address</label>
+                    <input class="erAddress" type="text" placeholder="Address">
                 </div>
-                <div class='field'>
+                <!-- <div class='field'>
                     <label>Address Street</label>
                     <input class="erAddressSt" type="text" placeholder="Address Street">
-                </div>
+                </div> -->
                 <div class='field'>
                     <label>Address Zone</label>
                     <div class="ui selection dropdown erAddressZone">
@@ -341,17 +381,15 @@
                     <input class="erBirthPlace" type="text" placeholder="Birth Place">
                 </div>
                 <div class='field'>
+                    <!-- <label>Citizenship</label>
+                    <input class="erCitizenship" type="text" placeholder="Citizenship"> -->
                     <label>Citizenship</label>
-                    <input class="erCitizenship" type="text" placeholder="Citizenship">
+                    <div class="ui selection dropdown erCitizenship">
+                        <div class="default text">Citizenship</div>
+                        <i class="dropdown icon"></i>
+                    </div>
+                    <input class="erOtherCitizenship" type="text" placeholder="Others">
                 </div>
-            </div>
-            <div class="field">
-                <img class="ui middle aligned tiny image erImagePreview" src="">
-                <button class="ui labeled icon button erUploadImage">
-                    <i class="upload icon"></i>Upload Image
-                </button>
-                <input style="display: none;" type="file" class="erImage" name="crImage"> 
-                <input style="display: none;" type="text" class="erImageURL"> 
             </div>
         </form>
     </div>
@@ -666,10 +704,25 @@
                         <i class="dropdown icon"></i>
                     </div>
                 </div>
-                <div class="field">
+                <!-- <div class="field">
                     <label>Purpose</label>
                     <input class="rpPurpose" type="text" placeholder="Purpose">
+                </div> -->
+                <div class="field bcPurpose">
+                    <label>Purpose</label>
+                    <div class="ui selection dropdown rpPurposeBC">
+                        <div class="text">Purpose</div>
+                        <i class="dropdown icon"></i>
+                    </div>
                 </div>
+                <div class="field iPurpose">
+                    <label>Purpose</label>
+                    <div class="ui selection dropdown rpPurposeI">
+                        <div class="text">Purpose</div>
+                        <i class="dropdown icon"></i>
+                    </div>
+                </div>
+                <input class="purposeOthers" type="text" placeholder="Others">
             </div>
         </form>
     </div>
@@ -792,7 +845,7 @@
     <i class="close icon"></i>
     <div class="header">
         Update Owner
-    </div>
+    </div>Kind of Business
     <div class="content">
         <form class="ui form eoForm">
             <div class="three fields">
@@ -880,7 +933,13 @@
             <div class="three fields">
                 <div class="field">
                     <label>Floor Area</label>
-                    <input class="aobFloorArea" type="text" placeholder="Floor Area">
+                    <!-- <input class="aobFloorArea" type="text" placeholder="Floor Area"> -->
+                    <div class="ui right labeled input">
+                        <input class="aobFloorArea" type="text" placeholder="Floor Area">
+                        <div class="ui basic label">
+                            sq. m
+                        </div>
+                    </div>
                 </div>
                 <div class="field">
                     <label>DTI/SEC Reg. No.</label>
@@ -888,7 +947,11 @@
                 </div>
                 <div class="field">
                     <label>Capitalization</label>
-                    <input class="aobCapitalization" type="number" placeholder="Capitalization">
+                    <!-- <input class="aobCapitalization" type="number" placeholder="Capitalization"> -->
+                    <div class="ui right labeled input">
+                        <label for="amount1" class="ui label">₱</label>
+                        <input class="aobCapitalization" type="number" placeholder="Capitalization" id="amount1">
+                    </div>
                 </div>
             </div>
             <div class="two fields">
@@ -896,9 +959,17 @@
                     <label>Contact No.</label>
                     <input class="aobContactNo" type="text" placeholder="Contact No.">
                 </div>
-                <div class="field">
+                <!-- <div class="field">
                     <label>Kind of Business</label>
                     <input class="aobKindOfBusiness" type="text" placeholder="Kind of Business">
+                </div> -->
+                <div class="field">
+                    <label>Kind of Business</label>
+                    <div class="ui selection dropdown aobKindOfBusiness">
+                        <div class="text">Kind of Business</div>
+                        <i class="dropdown icon"></i>
+                    </div>
+                    <input class="aobOthersKindOfBusiness" type="text" placeholder="Others">
                 </div>
             </div>
         </form>
@@ -934,7 +1005,13 @@
             <div class="three fields">
                 <div class="field">
                     <label>Floor Area</label>
-                    <input class="eobFloorArea" type="text" placeholder="Floor Area">
+                    <!-- <input class="eobFloorArea" type="text" placeholder="Floor Area"> -->
+                    <div class="ui right labeled input">
+                        <input class="eobFloorArea" type="text" placeholder="Floor Area">
+                        <div class="ui basic label">
+                            sq. m
+                        </div>
+                    </div>
                 </div>
                 <div class="field">
                     <label>DTI/SEC Reg. No.</label>
@@ -942,7 +1019,11 @@
                 </div>
                 <div class="field">
                     <label>Capitalization</label>
-                    <input class="eobCapitalization" type="number" placeholder="Capitalization">
+                    <!-- <input class="eobCapitalization" type="number" placeholder="Capitalization"> -->
+                    <div class="ui right labeled input">
+                        <label for="amount2" class="ui label">₱</label>
+                        <input class="eobCapitalization" type="number" placeholder="Capitalization" id="amount2">
+                    </div>
                 </div>
             </div>
             <div class="two fields">
@@ -950,9 +1031,17 @@
                     <label>Contact No.</label>
                     <input class="eobContactNo" type="text" placeholder="Contact No.">
                 </div>
-                <div class="field">
+                <!-- <div class="field">
                     <label>Kind of Business</label>
                     <input class="eobKindOfBusiness" type="text" placeholder="Kind of Business">
+                </div> -->
+                <div class="field">
+                    <label>Kind of Business</label>
+                    <div class="ui selection dropdown eobKindOfBusiness">
+                        <div class="text">Kind of Business</div>
+                        <i class="dropdown icon"></i>
+                    </div>
+                    <input class="eobOthersKindOfBusiness" type="text" placeholder="Others">
                 </div>
             </div>
         </form>
@@ -988,7 +1077,13 @@
             <div class="three fields">
                 <div class="field">
                     <label>Floor Area</label>
-                    <input class="eoebFloorArea" type="text" placeholder="Floor Area">
+                    <!-- <input class="eoebFloorArea" type="text" placeholder="Floor Area"> -->
+                    <div class="ui right labeled input">
+                        <input class="eoebFloorArea" type="text" placeholder="Floor Area">
+                        <div class="ui basic label">
+                            sq. m
+                        </div>
+                    </div>
                 </div>
                 <div class="field">
                     <label>DTI/SEC Reg. No.</label>
@@ -996,7 +1091,11 @@
                 </div>
                 <div class="field">
                     <label>Capitalization</label>
-                    <input class="eoebCapitalization" type="number" placeholder="Capitalization">
+                    <!-- <input class="eoebCapitalization" type="number" placeholder="Capitalization"> -->
+                    <div class="ui right labeled input">
+                        <label for="amount2" class="ui label">₱</label>
+                        <input class="eoebCapitalization" type="number" placeholder="Capitalization" id="amount2">
+                    </div>
                 </div>
             </div>
             <div class="two fields">
@@ -1004,9 +1103,17 @@
                     <label>Contact No.</label>
                     <input class="eoebContactNo" type="text" placeholder="Contact No.">
                 </div>
-                <div class="field">
+                <!-- <div class="field">
                     <label>Kind of Business</label>
                     <input class="eoebKindOfBusiness" type="text" placeholder="Kind of Business">
+                </div> -->
+                <div class="field">
+                    <label>Kind of Business</label>
+                    <div class="ui selection dropdown eoebKindOfBusiness">
+                        <div class="text">Kind of Business</div>
+                        <i class="dropdown icon"></i>
+                    </div>
+                    <input class="eoebOthersKindOfBusiness" type="text" placeholder="Others">
                 </div>
             </div>
         </form>
