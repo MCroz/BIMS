@@ -6,13 +6,13 @@
     <a href="javascript:void(0)" class="icon active item" id="showToggle"><h3><i class="chevron right icon"></i></h3></a>
     <a href="#" data-toggle="slide" class="item"><h3>BIMS</h3></a>
     <div class="menu right">
-        <a class="icon item pointer" data-toggle="popup" data-content="#user" data-position="bottom right"><img src="assets/img/people_4.jpg" class="ui avatar image" alt=""></a>
+        <a class="icon item pointer" data-toggle="popup" data-content="#user" data-position="bottom right"><img src="<%=window.bims.imageLocations + 'bims-logo.png' %>" class="ui avatar image" alt=""></a>
         <div id="user" class="ui popup">
             <div class="ui secondary vertical menu">
                 <div class="header item">USER MENU</div>
                 <a href="" class="item btnUserProfile">Profile <i class="user icon"></i></a>
                 <div class="ui divider"></div>
-                <a href="index.html" class="item">Logout <i class="sign out icon"></i></a>
+                <a href="" class="item btnLogout">Logout <i class="sign out icon"></i></a>
             </div>
         </div>
     </div>
@@ -54,7 +54,7 @@
                     <% } %>
 
                     <% if (window.bims.currentUser.Role == 'Administrator') { %>
-                    <a href="#" class="item"><i class="sign in icon"></i> <span>Reports</span></a>
+                    <a href="#" class="item btnReports"><i class="sign in icon"></i> <span>Reports</span></a>
                     <% } %>
                 </div>
             </div>

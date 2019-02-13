@@ -1,6 +1,12 @@
 body {
   padding-top: 70px;
   background-color: #FFFFFF;
+
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+	font: .8em/200%;
+	height: 100%;
+	position: relative;
 }
 .pointer {
   cursor: pointer;
