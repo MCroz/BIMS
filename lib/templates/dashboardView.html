@@ -2,6 +2,7 @@
 <div class="ui horizontal divider">Dashboard</div>
 
 <div class="ui doubling four column grid">
+    <% if (window.bims.currentUser.Role == "Inventory/Medicine Staff" || window.bims.currentUser.Role == "Administrator") { %>
     <div class="column">
         <div class="views">
             <div class="icon-order"><i class="eye icon"></i></div>
@@ -11,6 +12,8 @@
             </div>
         </div>
     </div>
+    <% } %>
+    <% if (window.bims.currentUser.Role == "Document Staff" || window.bims.currentUser.Role == "Administrator") { %>
     <div class="column">
         <div class="orders">
             <div class="icon-order"><i class="users icon"></i></div>
@@ -38,4 +41,5 @@
             </div>
         </div>
     </div>
+    <% } %>
 </div>
