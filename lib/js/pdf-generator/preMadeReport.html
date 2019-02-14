@@ -1,0 +1,43 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Table Example</title>
+        <style>
+            table {
+                border-collapse: collapse;
+                width: 100%;
+            }
+            th, td {
+                border: 1px solid #ccc;
+                padding: 10px;
+            }
+            table.alt tr:nth-child(even) {
+                background-color: #eee;
+            }
+            table.alt tr:nth-child(odd) {
+                background-color: #fff;
+            }            
+        </style>
+    <style>
+        @media print {
+                body {
+                  background: white;
+                }
+                #mainbox {
+                  margin: 0;
+                  height: 100%;
+                  width: 100%;        
+                }
+              }
+            </style>
+    </head>
+    <body>
+      <div class="page">
+          {{Report}}
+
+          </table>
+      </div>
+    </body>
+</html>
